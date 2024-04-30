@@ -62,7 +62,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-    "spider":"./jar/fty.jar"
+    "jar":"./jar/fty.jar"
     },
     {
       "key": "苹果",
@@ -72,7 +72,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-    "spider":"./jar/fty.jar"
+    "jar":"./jar/fty.jar"
     },
 		
 		
