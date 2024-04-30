@@ -48,7 +48,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-    "spider":"./jar/xiqu.jar"
+    "jar":"./jar/xiqu.jar"
     },
 		{
       "key": "酷看",
