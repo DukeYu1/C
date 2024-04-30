@@ -86,7 +86,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://www.czys03.com/"
+      "ext": "https://www.czys03.com/",
+	       "jar":"./jar/fty.jar"
     },
 		
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
