@@ -38,7 +38,7 @@
     "quickSearch": 1,
     "filterable": 1,
     "ext": "./js1/xiqu.json",
-    "jar":"./jar/xiqu.jar"
+    "spide":"./jar/xiqu.jar"
     },
 		{
       "key": "YGP",
