@@ -76,19 +76,7 @@
     },
 		
     
-    {
-      "key": "厂长",
-      "name": "📔厂长┃无广",
-      "type": 3,
-      "api": "csp_Czsapp",
-      
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "https://www.czys03.com/",
-	       "jar":"./jar/fty.jar"
-    },
+    
 		
 		{"key":"Local","name":"本地","type":3,"api":"csp_Local"},
 		{"key":"PushShare","name":"我的资源分享","type":3, "api":"csp_PushShare","searchable":1,"quickSearch":1, "changeable":1, "filterable":0, "timeout":60, "ext":"./lib/tokenm.json$$$./lib/pushshare.txt$$$db$$$1",
@@ -454,7 +442,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "./js1/nmys.json"
+      "ext": "./js1/nmys.json",
+		  	"jar": "./lib/XBPQ.jar"	
     },
 		
 {
