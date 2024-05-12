@@ -857,7 +857,7 @@
 
      {
             "name": "嗅探",
-            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6474.0 Safari/537.36 Edg/124.0.2478.97",
             "type": 0,
             "url": "https://d.kstore.space/download/7220/ysp.m3u",
             "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
