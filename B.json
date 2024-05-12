@@ -802,7 +802,7 @@
             "type": 0,
             "playerType": 2,
             "url": "https://d.kstore.space/download/7220/C.txt",
-            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+           "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         },
 
@@ -813,8 +813,8 @@
         "url": "https://cc-im-kefu-cos.7moor-fs2.com/im/2768a390-5474-11ea-afc9-7b323e3e16c0/d4fe44c5-107c-4511-af02-aa08fb10dff7/2024-04-25/2024-04-25_17:22:21/1714036941087/98644330/wexiptv.txt",
         "playerType": 1,
         "ua": "okhttp/3.15",
-        "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-         "logo": "https://epg.112114.xyz/logo/{name}.png"
+       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
     {
         "name": "IPV4",
@@ -822,8 +822,8 @@
         "url": "https://cc-im-kefu-cos.7moor-fs2.com/im/2768a390-5474-11ea-afc9-7b323e3e16c0/d4fe44c5-107c-4511-af02-aa08fb10dff7/2024-04-25/2024-04-25_17:25:01/1714037101343/5511539/wexlive.txt",
         "playerType": 1,
         "ua": "okhttp/3.15",
-        "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-         "logo": "https://epg.112114.xyz/logo/{name}.png"
+       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
 
  {
@@ -869,8 +869,8 @@
         "url": "https://mirror.ghproxy.com/raw.githubusercontent.com/ssili126/tv/main/itvlist.txt",
         "playerType": 1,
         "ua": "okhttp/3.15",
-        "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-        "logo": "https://epg.112114.xyz/logo/{name}.png"
+       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
 
      {
