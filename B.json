@@ -801,7 +801,7 @@
             "name": "live",
             "type": 0,
             "playerType": 2,
-            "url": "https://d.kstore.space/download/7220/C.txt",
+            "url": "https://d.kstore.space/download/7220/B.txt",
            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         },
