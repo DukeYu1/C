@@ -14,6 +14,62 @@
       "ext": "https://gitcode.net/wexfnw/wex/-/raw/master/douban.json"
     },
     {
+      "key": "360",
+      "name": "三零｜影视｜弹幕",
+      "type": 3,
+      "api": "csp_Sp360",
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "爱酷",
+      "name": "爱酷｜影视｜采集",
+      "type": 1,
+      "api": "https://cj.json.icu/aiku.php/provide/vod/?ac=list",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "奈飞",
+      "name": "奈飞｜美剧｜蓝光",
+      "type": 3,
+      "api": "./lib1/drpy2.min.js",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "./js1/奈飞工厂.js"
+    },
+    {
+      "key": "圣城",
+      "name": "圣城｜影视｜蓝光",
+      "type": 3,
+      "api": "csp_qiao3",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9",
+      "jar": "./jar/qj.jar"
+    },
+
+
+    
+
+    {"key":"喵喵","name":"喵喵｜动漫｜蓝光","type":3,"api":"./lib1/drpy2.min.js","searchable":1,"changeable":1,"ext":"./js1/喵喵次元.js"},
+    {"key":"咕咕","name":"咕咕｜动漫｜蓝光","type":3,"api":"./lib1/drpy2.min.js","searchable":1,"changeable":1,"ext":"./js1/咕咕番.js"},
+    {
+      "key": "追剧",
+      "name": "追剧｜影视｜蓝光",
+      "type": 3,
+      "api": "csp_TTian",
+      "playerType": 1,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1,
+      "ext": "http://app.kzjtv.com"
+    },
+    {
       "key": "戏曲自定义",
       "name": " 💖吾爱戏曲",
       "type": 3,
@@ -835,7 +891,6 @@
       "searchable": 1,
       "changeable": 1
     },
-
     {
       "key": "酷奇",
       "name": "🎤酷奇┃MV",
@@ -876,7 +931,6 @@
       "changeable": 0,
       "jar": "./jar/fan.jar"
     },
-   
     {
       "key": "虎牙直播js",
       "name": "🐯虎牙┃直播",
@@ -1136,6 +1190,67 @@
       "name": "帅",
       "type": 1,
       "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url="
+    },
+    {
+      "name": "LR",
+      "type": 1,
+      "url": "https://api.json.icu/api/?key=92eebc17b8bf5741650f4af91d511009&url=",
+      "ext": {
+        "flag": [
+          "imgo",
+          "migu",
+          "qq",
+          "qiyi",
+          "mgtv",
+          "bilibili",
+          "youku"
+        ],
+        "header": {
+          "User-Agent": "Dart/2.18 (dart:io)"
+        }
+      }
+    },
+    {
+      "name": "LR4",
+      "type": 1,
+      "url": "http://121.62.61.51:6888/api/?key=eIQ9JzXVIzkY3ZSoEZ&url=",
+      "ext": {
+        "flag": [
+          "imgo",
+          "migu",
+          "qq",
+          "qiyi",
+          "mgtv",
+          "bilibili",
+          "youku",
+          "seven",
+          "NBY"
+        ],
+        "header": {
+          "User-Agent": "okhttp-okgo/jeasonlzy"
+        }
+      }
+    },
+    {
+      "name": "LR7",
+      "type": 0,
+      "url": "http://play.shijie.chat/player/ec.php?code=qq&if=1&url=",
+      "ext": {
+        "flag": [
+          "imgo",
+          "migu",
+          "qq",
+          "qiyi",
+          "mgtv",
+          "bilibili",
+          "youku"
+        ]
+      }
+    },
+    {
+      "name": "LR8",
+      "type": 0,
+      "url": "https://jx.777jiexi.com/player/?url="
     }
   ],
   "doh": [
@@ -1329,6 +1444,127 @@
       "script": [
         "document.getElementsByClassName('swal-button swal-button--confirm')[0].click()"
       ]
+    },
+    {
+      "name": "kk",
+      "hosts": [
+        "kuaikan"
+      ],
+      "regex": [
+        "5",
+        "20.123",
+        "20.167",
+        "#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-KEY:METHOD((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "yqk",
+      "hosts": [
+        "yqk"
+      ],
+      "regex": [
+        "18.4",
+        "15.1666",
+        "#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-OUT((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-IN"
+      ]
+    },
+    {
+      "name": "sn",
+      "hosts": [
+        "suonizy"
+      ],
+      "regex": [
+        "#EXTINF.*?\\s+.*?original.*?\\.ts\\s+",
+        "15.1666",
+        "15.2666",
+        "16.3333",
+        "15.266667"
+      ]
+    },
+    {
+      "name": "bf",
+      "hosts": [
+        "bfzy"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "xx",
+      "hosts": [
+        "aws.ulivetv.net"
+      ],
+      "regex": [
+        "#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:8,[\\s\\S]*?#EXT-X-DISCONTINUITY"
+      ]
+    },
+    {
+      "name": "lz",
+      "hosts": [
+        "vip.lz",
+        "hd.lz",
+        "v.cdnlz",
+        "yzzy1.play"
+      ],
+      "regex": [
+        "18.5333",
+        "19.52",
+        "18.6666"
+      ]
+    },
+    {
+      "name": "ff",
+      "hosts": [
+        "vip.ffzy",
+        "hd.ffzy",
+        "ffzy"
+      ],
+      "regex": [
+        "25.0666",
+        "25.08",
+        "20.52",
+        "25.1",
+        "25.1999"
+      ]
+    },
+    {
+      "name": "hs",
+      "hosts": [
+        "huoshan.com"
+      ],
+      "regex": [
+        "item_id="
+      ]
+    },
+    {
+      "name": "dy",
+      "hosts": [
+        "douyin.com"
+      ],
+      "regex": [
+        "is_play_url="
+      ]
+    },
+    {
+      "name": "nm",
+      "hosts": [
+        "toutiaovod.com"
+      ],
+      "regex": [
+        "video/tos/cn"
+      ]
+    },
+    {
+      "name": "cl",
+      "hosts": [
+        "magnet"
+      ],
+      "regex": [
+        "最 新",
+        "直 播",
+        "更 新"
+      ]
     }
   ],
   "ads": [
@@ -1352,7 +1588,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-   
     {
       "name": "嗅探",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
@@ -1361,7 +1596,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
     {
       "name": "stream需梯子",
       "type": 0,
