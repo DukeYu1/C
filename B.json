@@ -161,7 +161,8 @@
         "播放数组": "下载地址</h2>&&</ul>[不包含:网盘]",
         "播放列表": "<ul>&&</div>[包含:magnet]"
       },
-      "jar": "./lib/XBPQ.jar"
+      "jar": "./jar/pg.jar"
+      
     },
     {
       "key": "新6V",
@@ -172,7 +173,7 @@
       "changeable": 1,
       "timeout": 60,
       "ext": "./lib/tokenm.json$$$https://www.66ss.org$$$null$$$1",
-      "jar": "./lib/XBPQ.jar"
+      "jar": "./jar/pg.jar"
     },
     {
       "key": "追剧",
