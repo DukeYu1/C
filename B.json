@@ -3,8 +3,10 @@
 
 
 
+
   "wallpaper": "https://深色壁纸.xxooo.cf/",
-    "sites": [
+  "logo": "https://img2.imgtp.com/2024/05/14/XzmGtIbM.jpg",
+  "sites": [
     {
 	  "key":"Douban",
 	  "name":"🐮豆瓣🐮",
@@ -15,15 +17,7 @@
 	  "filterable": 0,
       "ext": "https://gitcode.net/wexfnw/wex/-/raw/master/douban.json"
 	},
-	{
-      "key": "应用商店",
-      "name": "🆗【影视应用商店】🆗",
-      "type": 3,
-      "api": "csp_Market",
-      "searchable": 0,
-      "changeable": 0,
-      "ext": "https://fm.t4tv.hz.cz/json/market.json"
-    },
+
     {
 	  "key":"Doubana",
 	  "name":"⬇️【阿里夸克先扫码】⬇️",
@@ -47,6 +41,17 @@
         "ratio": 1.43
         }
     },
+	{
+      "key": "自定义",
+      "name": "🥇DIY┃播放┃全能",
+      "type": 3,
+      "api": "csp_Wexdiy",
+      "searchable": 1,
+      "changeable": 0,
+	  	  "style": {
+        "type": "list"
+        }
+    },
 
 	{
       "key": "土豆",
@@ -56,6 +61,16 @@
       "searchable": 1,
       "changeable": 1
     },
+
+	{
+      "key": "玩偶",
+      "name": "🥷玩偶┃网盘┃综合",
+      "type": 3,
+      "api": "csp_Wogg",
+      "searchable": 1,
+      "changeable": 1
+    },
+
 	{
       "key": "Wexyingchao",
       "name": "🦜鸟巢┃网盘┃综合",
@@ -85,6 +100,14 @@
       "name": "👬基友┃影视┃App",
       "type": 3,
       "api": "csp_Wexxiongdiys",
+      "searchable": 1,
+      "changeable": 1
+    },
+    {
+      "key": "Wexhuayang",
+      "name": "🌺花花┃影视┃App",
+      "type": 3,
+      "api": "csp_Wexhuayang",
       "searchable": 1,
       "changeable": 1
     },
@@ -161,7 +184,49 @@
       "searchable": 1,
       "changeable": 1
     },
-	
+	{
+   "key": "haiwaikan",
+   "name": "🛝海看┃秒播┃梯子",
+   "type": 1,
+   "api": "https://haiwaikan.com/api.php/provide/vod?",
+   "searchable": 1,
+   "changeable": 1,
+   "categories": [
+    "国产剧",
+    "韩剧",
+    "日剧",
+    "台剧",
+    "泰剧",
+    "港剧",
+    "欧美剧",
+	"冒险片",
+    "剧情片",
+    "动作片",
+    "同性片",
+    "喜剧片",
+    "奇幻片",
+    "恐怖片",
+    "悬疑片",
+    "惊悚片",
+    "战争片",
+    "歌舞片",
+    "灾难片",
+    "爱情片",
+    "犯罪片",
+    "科幻片",
+    "纪录片",
+    "经典片",
+    "动画电影",
+    "韩国综艺",
+    "国产综艺",
+    "日本综艺",
+    "欧美综艺",
+	"日本动漫",
+    "国产动漫",
+    "欧美动漫"
+
+   ]
+  },
 	{
       "key": "Wexjiohub",
       "name": "🎉啾啾┃影视┃直连",
@@ -179,7 +244,14 @@
       "searchable": 1,
       "changeable": 1
     },
-
+    {
+      "key": "WexShijuedy",
+      "name": "👓看看┃影视┃直连",
+      "type": 3,
+      "api": "csp_WexShijuedy",
+      "searchable": 1,
+      "changeable": 1
+    },
 	{
       "key": "csp_Nmys",
       "name": "🎅‍伯伯┃影视┃直连",
@@ -228,6 +300,17 @@
       "api": "csp_Wexbttwo",
       "searchable": 1,
       "changeable": 1
+    },
+    {
+      "key": "Wexduanjuquark",
+      "name": "🌸短劇┃夸克┃直连",
+      "type": 3,
+      "api": "csp_Wexduanjuquark",
+      "searchable": 1,
+      "changeable": 1,
+	  	  "style": {
+        "type": "list"
+        }
     },
     {
       "key": "Wexduanjuvop",
@@ -493,6 +576,9 @@
       "searchable": 1,
       "changeable": 1
     },
+
+
+/
     {
       "key": "異界",
       "name": "🤡異界┃动漫",
@@ -501,21 +587,19 @@
       "searchable": 1,
       "changeable": 1
     },
-
-	{
-      "key": "Wexciliso",
-      "name": "🛩️磁力┃聚合┃搜",
-      "type": 3,
-      "api": "csp_Wexciliso",
-      "searchable": 1,
-      "changeable": 0
-    },
-
 	{
       "key": "Wexduanjuso",
       "name": "😍短剧┃搜索┃爽",
       "type": 3,
       "api": "csp_Wexduanjuso",
+      "searchable": 1,
+      "changeable": 0
+    },/
+	{
+      "key": "Wexciliso",
+      "name": "🛩️磁力┃聚合┃搜",
+      "type": 3,
+      "api": "csp_Wexciliso",
       "searchable": 1,
       "changeable": 0
     },
@@ -535,7 +619,14 @@
       "searchable": 1,
       "changeable": 0
     },
- 
+    {
+      "key": "雲搜",
+      "name": "🎠雲搜┃阿里┃搜",
+      "type": 3,
+      "api": "csp_UpYun",
+      "searchable": 1,
+      "changeable": 0
+    },
     {
       "key": "盤搜",
       "name": "🎠盤搜┃阿里┃搜",
@@ -797,7 +888,7 @@
 	"pv.vipwm.cc"
   ],
    "lives": [
- {
+        {
             "name": "live",
             "type": 0,
             "playerType": 2,
@@ -806,64 +897,40 @@
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         },
 
-
-    {
-        "name": "综合",
-        "type": 0,
-        "url": "https://cc-im-kefu-cos.7moor-fs2.com/im/2768a390-5474-11ea-afc9-7b323e3e16c0/d4fe44c5-107c-4511-af02-aa08fb10dff7/2024-04-25/2024-04-25_17:22:21/1714036941087/98644330/wexiptv.txt",
-        "playerType": 1,
-        "ua": "okhttp/3.15",
-       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-    {
-        "name": "IPV4",
-        "type": 0,
-        "url": "https://cc-im-kefu-cos.7moor-fs2.com/im/2768a390-5474-11ea-afc9-7b323e3e16c0/d4fe44c5-107c-4511-af02-aa08fb10dff7/2024-04-25/2024-04-25_17:25:01/1714037101343/5511539/wexlive.txt",
-        "playerType": 1,
-        "ua": "okhttp/3.15",
-       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-
- {
-            "name": "白嫖3",
-            "type": 0,
-            "playerType": 2,
-            "url": "https://networkmms.xyz/live/tv.txt",
-            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-        },
 	       {
-            "name": "安博",
-            "type": 0,
-            "playerType": 2,
-            "url": "https://tang.serv00.net/zb/99?token=f6c5f1ee",
-            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-        },
-	       {
-            "name": "169",
+            "name": "焦点",
             "type": 0,
             "playerType": 2,
             "url": "https://tang.hz.cz/zb/tv?type=169&token=f6c5f1ee",
             "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         },
-
-
-
-
-
-     {
+	       {
+            "name": "欧华",
+            "type": 0,
+            "playerType": 2,
+            "url": "https://tang.hz.cz/zb/tv?type=159&token=f6c5f1ee",
+            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+        },
+    	       {
+            "name": "安博",
+            "type": 0,
+            "playerType": 2,
+            "url": "https://tang.hz.cz/zb/tv?type=99&token=f6c5f1ee",
+            "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+            "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+        },
+  {
             "name": "嗅探",
-            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6474.0 Safari/537.36 Edg/124.0.2478.97",
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
             "type": 0,
             "url": "https://d.kstore.space/download/7220/ysp.m3u",
             "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         },
-    {
+
+{
         "name": "白嫖",
         "type": 0,
         "url": "https://mirror.ghproxy.com/raw.githubusercontent.com/ssili126/tv/main/itvlist.txt",
@@ -873,7 +940,7 @@
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
 
-     {
+ {
             "name": "stream需梯子",
             "type": 0,
             "playerType": 1,
@@ -881,7 +948,6 @@
             "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
             "logo": "https://diyp1.112114.xyz/logo/{name}.png"
         }
-
  ]  
 
 }
