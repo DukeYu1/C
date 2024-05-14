@@ -50,7 +50,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9"
+      "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9",
+      "jar":"./jar/qj.jar"
     },
     {
       "key": "喵喵",
