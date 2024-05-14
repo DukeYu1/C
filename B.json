@@ -173,129 +173,7 @@
       "api": "csp_AppYsV2",
       "ext": "http://122.228.84.103:5822/api.php/app/"
     },
-    {
-      "key": "悠云看剧",
-      "name": "悠云看剧",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "简介": "阿美祝您观影愉快",
-        "分类url": "https://www.yoyys.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
-        "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
-        "jar": "./jar/zmh.jar"
-      }
-    },
-    {
-      "key": "app影视",
-      "name": "app影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "简介": "阿美为您剧情介绍: +stui-content__desc col-pd clearfix\">&&</div>",
-        "分类url": "https://www.appmovie.cc/index.php/vod/show/area/{area}/{year}/class/{class}/id/{cateId}/page/{catePg}.html",
-        "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
-        "jar": "./jar/zmh.jar"
-      }
-    },
-    {
-      "key": "剧多影视",
-      "name": "剧多影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://www.jdd456.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}/",
-        "分类": "电视剧$dianshiju#电影$dianyinglei#动漫$dongman#综艺$zongyi",
-        "jar": "./jar/zmh.jar"
-      }
-    },
-    {
-      "key": "123看影视",
-      "name": "123影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://www.123kan.cc/show/{cateId}/area/{area}/page/{catePg}/year/{year}.html",
-        "分类": "电视剧$tv#电影$dy#动漫$dm"
-      }
-    },
-    {
-      "key": "凌云影视",
-      "name": "凌云影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "请求头": "手机",
-        "数组": "</li><li>&&</li>",
-        "图片": "data-src=\"&&\"",
-        "副标题": "icon-play\">&&</span>",
-        "线路数组": "<option&&/option>",
-        "线路标题": ">&&<",
-        "分类url": "https://www.lyys8.com/list/{cateId}-{area}--{class}-----{catePg}---{year}.html",
-        "分类": "电影$movie#剧集$tv#动漫$cartoon"
-      }
-    },
-    {
-      "key": "电影驿站",
-      "name": "电影驿站",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://www.dyyz1.app/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
-        "分类": "电影$1#剧集$2#综艺$3#动漫$4"
-      }
-    },
-    {
-      "key": "爱看影视",
-      "name": "爱看影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://www.3ayy.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
-        "分类": "电视剧$2#电影$1#动漫$4#综艺$3"
-      }
-    },
-    {
-      "key": "YY影视",
-      "name": "YY影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "数组": "p1 m1\">&&</li>",
-        "线路数组": "playerico ico-Azhan\">&&</li>",
-        "分类url": "https://www.yyvdian.com/vodshow/{cateId}-{area}-------{catePg}---{year}.html",
-        "分类": "国产剧$13#电视剧$2#电影$1#综艺$3#动漫$4"
-      }
-    },
-    {
-      "key": "万家影视",
-      "name": "万家影视",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "ext": {
-        "分类url": "https://www.lwjtv.com/ystop/{cateId}/area/{area}/page/{catePg}/year/{year}.html",
-        "分类": "电视剧$dianshiju#电影$dianying#综艺$zongyi#动漫$dongmna"
-      }
-    },
-    {
-      "key": "freeok",
-      "name": "freeok",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "playerType": "2",
-      "ext": {
-        "分类url": "https://www.freeok.vip/vod-show/{cateId}-{area}-------{catePg}---{year}.html",
-        "分类": "FREE电影&FREE剧集&FREE动漫&FREE综艺&FREE短剧&FREE少儿",
-        "分类值": "1&2&3&4&12&5",
-        "播放请求头": "User-Agent$Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
-        "副标题": "<div class=\"module-item-note\">&&</div>",
-        "嗅探词": "m3u8#.m3u8#.mp4#freeok.mp4#/obj/",
-        "线路数组": "data-dropdown-value=&&</div>[不包含:夸克]",
-        "线路标题": "<span>&&</small>",
-        "导演": "导演：&&</div>",
-        "主演": "主演：&&</div>",
-        "简介": "<p>&&</p>"
-      }
-    },
+    
     {
       "key": "新浪影视",
       "name": "新浪影视",
@@ -383,15 +261,7 @@
       "quickSearch": 1,
       "filterable": 1
     },
-    {
-      "key": "奈飞",
-      "name": "奈飞｜美剧｜蓝光",
-      "type": 3,
-      "api": "./lib1/drpy2.min.js",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": "./js1/奈飞工厂.js"
-    },
+  
     {
       "key": "圣城",
       "name": "圣城｜影视｜蓝光",
