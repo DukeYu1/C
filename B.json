@@ -23,7 +23,7 @@
         "简介": "阿美祝您观影愉快",
         "分类url": "https://www.yoyys.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
         "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
-        "jar": "./lib/XBPQ.jar"
+        "jar": "./jar/zmh.jar"
       }
     },
 
@@ -37,7 +37,7 @@
       "filterable": 1,
       "timeout": 120,
       "ext": "./lib/tokenm.json$$$https://www.meijumi.net/$$$proxy$$$1",
-      "jar": "./jar/PG.jar"
+      "jar": "./jar/pg.jar"
     },
     {
       "key": "Bt0",
@@ -52,7 +52,7 @@
       "style": {
         "type": "list",
         "ratio": 1.1,
-        "jar": "./jar/PG.jar"
+        "jar": "./jar/pg.jar"
       }
     },
     {
