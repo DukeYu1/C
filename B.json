@@ -13,6 +13,251 @@
       "filterable": 0,
       "ext": "https://gitcode.net/wexfnw/wex/-/raw/master/douban.json"
     },
+
+    {
+      "key": "悠云看剧",
+      "name": "悠云看剧",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "ext": {
+        "简介": "阿美祝您观影愉快",
+        "分类url": "https://www.yoyys.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
+        "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
+        "jar": "./lib/XBPQ.jar"
+      }
+    },
+
+    {
+      "key": "美剧迷",
+      "name": "美剧迷|网盘",
+      "type": 3,
+      "api": "csp_Meijumi",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 120,
+      "ext": "./lib/tokenm.json$$$https://www.meijumi.net/$$$proxy$$$1",
+      "jar": "./jar/PG.jar"
+    },
+    {
+      "key": "Bt0",
+      "name": "不太灵|磁力",
+      "type": 3,
+      "api": "csp_Bt0",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$null$$$proxy$$$1",
+      "style": {
+        "type": "list",
+        "ratio": 1.1,
+        "jar": "./jar/PG.jar"
+      }
+    },
+    {
+      "key": "Xpanpan",
+      "name": "小盘盘|网盘",
+      "type": 3,
+      "api": "csp_Xpanpan",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://xpanpan.site$$$proxy$$$1",
+      "style": {
+        "type": "list",
+        "ratio": 1.1,
+        "jar": "./jar/PG.jar"
+      }
+    },
+    {
+      "key": "Wogg",
+      "name": "玩偶哥哥|网盘",
+      "type": 3,
+      "api": "csp_Wogg",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://wogg.link/$$$proxy$$$1$$$./lib/wogg.json",
+      "jar": "./jar/PG.jar"
+    },
+    {
+      "key": "Wo4k",
+      "name": "玩偶4K|磁力",
+      "type": 3,
+      "api": "csp_Wo4k",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://www.wo4k.net/$$$proxy$$$1$$$./lib/wogg.json",
+      "jar": "./jar/PG.jar"
+    },
+    {
+      "key": "Gaoqing",
+      "name": "中国高清网|网盘",
+      "type": 3,
+      "api": "csp_Gaoqing",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://gaoqing.la/$$$proxy$$$1",
+      "jar": "./jar/PG.jar"
+    },
+    {
+      "key": "Moli",
+      "name": "HDmoli|网盘",
+      "type": 3,
+      "api": "csp_Moli",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://www.hdmoli.pro/$$$proxy$$$1$$$./lib/moli.json",
+      "jar": "./jar/PG.jar"
+    },
+    {
+      "key": "XBPQ_电影先生",
+      "name": "电影先生|XBPQ",
+      "jar": "./lib/XBPQ.jar",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "ext": {
+        "分类url": "https://dianyi.ng/pianku-{cateId}-{area}-------{catePg}---{year}.html",
+        "简介": "class=\"video-info-item video-info-content vod_content\">&&</span>",
+        "搜索url": "https://dianyi.ng/search--------------.html?wd={wd}",
+        "搜索数组": "<div class=\"module-item-pic\">&&</div>",
+        "图片": "src=\"&&\"",
+        "搜索标题": "title=\"&&\"",
+        "搜索副标题": ">&&</a>",
+        "线路数组": "data-dropdown-value=&&</div>",
+        "线路标题": "<span>&&</small>[替换:<span></small>共]+集",
+        "播放数组": "<div class=\"scroll-content\">&&</div>",
+        "播放标题": "<span>&&</span>",
+        "分类": "电影$dianying#电视剧$dianshiju#动漫$dongman#综艺$zongyi"
+      }
+    },
+    {
+      "key": "XBPQ_麻衣影院",
+      "name": "麻衣影院|XBPQ",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "jar": "./lib/XBPQ.jar",
+      "ext": {
+        "分类url": "https://www.huanyuxing.com/s/{cateId}/area/{area}/class/{class}/page/{catePg}/year/{year}.html",
+        "分类": "电影$id-a#电视剧$id-b#动漫$id-c#综艺$id-d"
+      }
+    },
+    {
+      "key": "haokongbu",
+      "name": "👿好恐怖|磁力|XBPQ",
+      "type": 3,
+      "api": "csp_XBPQ",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "主页url": "https://m.haokongbu.top/",
+        "分类url": "https://m.haokongbu.top/{cateId}/index_{catePg}.html[https://m.haokongbu.top/{cateId}/index.html]",
+        "分类": "国产剧$guochanju#港剧$gangju#动作片$dongzuopian#喜剧片$xijupian#爱情片$aiqingpian#科幻片$kehuanpian#恐怖片$kongbupian#战争片$zhanzhengpian#剧情片$juqingpian#微电影$weidianying#记录片$m_jlp#高清$gaoqing#动漫$donghuapian#台湾$taiwanju#日本$riju#韩国$hanju#欧美$oumeiju#泰国$taiguoju#海外$haiwaiju",
+        "副标题": "class=\"typeset\"&&</i>",
+        "起始页": 2,
+        "倒序": 1,
+        "播放数组": "下载地址</h2>&&</ul>[不包含:网盘]",
+        "播放列表": "<ul>&&</div>[包含:magnet]"
+      },
+      "jar": "./lib/XBPQ.jar"
+    },
+    {
+      "key": "新6V",
+      "name": "新6V|网盘",
+      "type": 3,
+      "api": "csp_Xb6v",
+      "searchable": 1,
+      "changeable": 1,
+      "timeout": 60,
+      "ext": "./lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
+    },
+    {
+      "key": "追剧",
+      "name": "追剧┃App",
+      "type": 3,
+      "api": "csp_TTian",
+      "ext": "http://app.kzjtv.com$$$null$$$1"
+    },
+    {
+      "key": "賤賤",
+      "name": "荐片",
+      "type": 3,
+      "api": "csp_Jianpian",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "./lib/jianpian.json$$$1",
+      "timeout": 60
+    },
+    {
+      "key": "JustLive",
+      "name": "JustLive",
+      "type": 3,
+      "api": "csp_JustLive",
+      "searchable": 1,
+      "changeable": 0
+    },
+    {
+      "key": "快看",
+      "name": "快看",
+      "type": 3,
+      "api": "csp_Kuaikan",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0,
+      "filterable": 1
+    },
+    {
+      "key": "Ikanbot",
+      "name": "爱看机器人",
+      "type": 3,
+      "api": "csp_Ikanbot",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "changeable": 1,
+      "ext": "https://v.ikanbot.com$$$proxy"
+    },
+    
+		{
+			"key": "ikun",
+			"name": "ikun",
+			"type": 1,
+			"api": "http://127.0.0.1:10079/p/0/proxy/https://ikunzyapi.com/api.php/provide/vod/?",
+			"playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=",
+			"playerType":1,
+			"searchable": 1,
+			"changeable": 1
+		},
+    {
+			"key": "異界",
+			"name": "異界",
+			"type": 3,
+			"api": "csp_Ysj",
+			"searchable": 1,
+			"changeable": 0
+		},
+    {
+			"key": "短剧",
+			"name": "短剧",
+			"type": 3,
+			"api": "csp_Duanju",
+			"searchable": 0,
+			"changeable": 1,
+			"ext":"https://www.duanjutv.icu"
+		},
     {
       "key": "360",
       "name": "三零｜影视｜弹幕",
@@ -34,7 +279,6 @@
       "jar": "http://www.wya6.cn/tz/HCCX.php",
       "ext": "./js1/央视大全.json"
     },
-
     {
       "key": "量子",
       "name": "量子影院",
@@ -166,27 +410,6 @@
       "quickSearch": 1,
       "filterable": 1
     },
-{
-   "key":"XBPQ_缘觉",
-   "name": "缘觉|XBPQ",
-   "jar": "https://d.kstore.space/download/2960/jar/XBPQ.jar",
-   "type": 3,
-   "api": "csp_XBPQ",
-   "ext":{ "数组": "<div class=\"card card-sm card-link\">&&</div>",
-   "图片":"img src=\"&&\"",
-   "链接":"href=\"&&\"",
-   "标题":"<h3 class=\"mb-0 card-title text-truncate\">&&</h3>",
-   "副标题": "span class=\"badge bg-pink position-absolute top-0 star-0\">&&</span>",
-   "线路数组":"<div class=\"d-flex\">&&</div>",
-   "播放链接":"href=\"/&&/play/&&.htm\"",
-   "播放数组":"<div class=\"btn-group\">&&</div>",
-   "分类数组": "<div class=\"col\">&&</div>",
-   "分类": "动作&爱情&喜剧&科幻&恐怖&战争",
-   "分类值":"dongzuo&aiqing&xiju&kehuan&kongbu&zhanzheng",
-    "分类url": "https://www.yjys.me/s/{cateId}/{catePg}"
-    }
-    },
-    
     {
       "key": "蚂蚁",
       "name": "蚂蚁影院",
@@ -194,7 +417,6 @@
       "api": "csp_AppYsV2",
       "ext": "http://122.228.84.103:5822/api.php/app/"
     },
-    
     {
       "key": "新浪影视",
       "name": "新浪影视",
@@ -282,7 +504,6 @@
       "quickSearch": 1,
       "filterable": 1
     },
-  
     {
       "key": "圣城",
       "name": "圣城｜影视｜蓝光",
@@ -1527,8 +1748,6 @@
       "name": "手动解析7",
       "url": "https://jx.xmflv.cc/?url="
     },
-
-
     {
       "name": "LR4",
       "type": 1,
