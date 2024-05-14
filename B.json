@@ -73,7 +73,8 @@
   "searchable": 1,
   "quickSearch": 1,
   "filterable": 1,
-  "ext": "./js1/视觉影视.js"
+  "ext": "./js1/视觉影视.js",
+  "jar": "./jar/pg.jar"
 },
 
 {
