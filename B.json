@@ -41,6 +41,114 @@
       },
       "jar": "./jar/pg.jar"
     },
+
+    {
+      "key": "meowtv_qxys",
+      "name": "秋霞┃影视",
+      "type": 3,
+      "api": "./lib/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": "./js1/秋霞电影.js"
+  },
+
+
+  {
+    "key": "meowtv_wfys",
+    "name": "网飞┃影视",
+    "type": 3,
+    "api": "./lib/drpy2.min.js",
+    "searchable": 1,
+    "quickSearch": 1,
+    "filterable": 1,
+    "ext": "./js1/网飞影视.js"
+},
+
+{
+  "key": "meowtv_sjys",
+  "name": "视觉┃影视",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "searchable": 1,
+  "quickSearch": 1,
+  "filterable": 1,
+  "ext": "./js1/视觉影视.js"
+},
+
+{
+  "key": "meowtv_zzys",
+  "name": "子子┃影视",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "searchable": 1,
+  "quickSearch": 1,
+  "filterable": 1,
+  "ext": "./js1/子子影视.js"
+},
+{
+  "key": "drpy_js_酷吧",
+  "name": "酷吧[js]|磁",
+  "type": 3,
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/kuba.js",
+  "quickSearch": 1,
+  "changeable": 1,
+  "timeout": 60
+},
+{
+  "key": "drpy_js_哔哩影视",
+  "name": "哔哩影视",
+  "type": 3,
+  "playerType": 2,
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/哔哩影视.js"
+},
+
+{
+  "key": "Libvio",
+  "name": "💐┃Lib┃影视",
+  "type": 3,
+  "playerType": "1",
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/LIBVIO.js"
+},
+
+{
+  "key": "saohuo",
+  "name": "👗┃骚火┃影视",
+  "type": 3,
+  "playerType": "2",
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/骚火.js"
+}, {
+  "key": "爱看影视",
+  "name": "❤┃爱看┃影视",
+  "type": 3,
+  "playerType": "2",
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/爱看.js"
+},
+{
+  "key": "圣城影视",
+  "name": "🏰┃圣城┃影视",
+  "type": 3,
+  "playerType": "2",
+  "api": "./lib/drpy2.min.js",
+  "ext": "./js1/SC1080.js"
+},
+
+{
+  "key": "拳皇争霸",
+  "name": "拳皇争霸",
+  "type": 3,
+  "searchable": 0,
+  "quickSearch": 0,
+  "changeable": 0,
+  "api": "./lib1/drpy2.min.js",
+  "ext": "./js1/quanhuang.js"
+},
+
     {
       "key": "Xpanpan",
       "name": "小盘盘|网盘",
