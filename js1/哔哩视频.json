@@ -1,0 +1,11 @@
+{
+	"classes": [
+
+{"type_name":"电影","type_id": "电影"},	
+{"type_name":"电视剧","type_id": "电视剧"},
+{"type_name":"动画片","type_id": "动画片"},
+{"type_name":"动漫世界","type_id": "动漫世界"}
+		 
+		  
+		    ]
+}
