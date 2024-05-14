@@ -34,7 +34,7 @@
       "jar": "http://www.wya6.cn/tz/HCCX.php",
       "ext": "./js1/央视大全.json"
     },
- 
+
     {
       "key": "量子",
       "name": "量子影院",
@@ -181,7 +181,8 @@
       "ext": {
         "简介": "阿美祝您观影愉快",
         "分类url": "https://www.yoyys.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
-        "分类": "电影$1#连续剧$2#动漫$4#综艺$3"
+        "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
+        "jar": "./jar/zmh.jar"
       }
     },
     {
@@ -192,7 +193,8 @@
       "ext": {
         "简介": "阿美为您剧情介绍: +stui-content__desc col-pd clearfix\">&&</div>",
         "分类url": "https://www.appmovie.cc/index.php/vod/show/area/{area}/{year}/class/{class}/id/{cateId}/page/{catePg}.html",
-        "分类": "电影$1#连续剧$2#动漫$4#综艺$3"
+        "分类": "电影$1#连续剧$2#动漫$4#综艺$3",
+        "jar": "./jar/zmh.jar"
       }
     },
     {
@@ -202,7 +204,8 @@
       "api": "csp_XBPQ",
       "ext": {
         "分类url": "https://www.jdd456.com/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}/",
-        "分类": "电视剧$dianshiju#电影$dianyinglei#动漫$dongman#综艺$zongyi"
+        "分类": "电视剧$dianshiju#电影$dianyinglei#动漫$dongman#综艺$zongyi",
+        "jar": "./jar/zmh.jar"
       }
     },
     {
