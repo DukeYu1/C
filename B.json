@@ -138,7 +138,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "热播",
@@ -150,7 +151,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "AO7TcBkd8I/B5wQc4Qma+pU="
+      "ext": "AO7TcBkd8I/B5wQc4Qma+pU=",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "萌米",
@@ -159,7 +161,8 @@
       "api": "csp_AppTT",
       "timeout": 15,
       "playerType": 1,
-      "ext": "AO7TcBkd8Iifux0Y8Qze6tVlMg=="
+      "ext": "AO7TcBkd8Iifux0Y8Qze6tVlMg==",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "贱贱",
@@ -181,7 +184,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://www.zxzjhd.com/"
+      "ext": "https://www.zxzjhd.com/",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "低端",
@@ -191,7 +195,8 @@
       "playerType": "2",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "毛驴",
@@ -202,7 +207,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://www.maolvys.com/"
+      "ext": "https://www.maolvys.com/",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "比特",
@@ -211,7 +217,8 @@
       "api": "csp_Bttwoo",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "Lib",
@@ -222,7 +229,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://www.libvio.pw/"
+      "ext": "https://www.libvio.pw/",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "Auete",
@@ -233,7 +241,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "https://auete.pro/"
+      "ext": "https://auete.pro/",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "新6V",
@@ -243,7 +252,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "ext": "http://www.xb6v.com/"
+      "ext": "http://www.xb6v.com/",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "Anime1",
@@ -252,7 +262,8 @@
       "api": "csp_Anime1",
       "searchable": 1,
       "quickSearch": 1,
-      "changeable": 1
+      "changeable": 1,
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "Doubana",
@@ -824,22 +835,7 @@
       "searchable": 1,
       "changeable": 1
     },
-    {
-      "key": "異界",
-      "name": "🤡異界┃动漫",
-      "type": 3,
-      "api": "csp_WexYsj",
-      "searchable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "Wexduanjuso",
-      "name": "😍短剧┃搜索┃爽",
-      "type": 3,
-      "api": "csp_Wexduanjuso",
-      "searchable": 1,
-      "changeable": 0
-    },
+
     {
       "key": "酷奇",
       "name": "🎤酷奇┃MV",
@@ -866,7 +862,8 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/MTV.json"
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/MTV.json",
+      "jar": "./jar/fan.jar"
     },
     {
       "key": "csp_Yj1211",
@@ -876,8 +873,10 @@
       "playerType": "1",
       "searchable": 0,
       "quickSearch": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "./jar/fan.jar"
     },
+   
     {
       "key": "虎牙直播js",
       "name": "🐯虎牙┃直播",
