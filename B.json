@@ -13,9 +13,6 @@
       "filterable": 0,
       "ext": "https://gitcode.net/wexfnw/wex/-/raw/master/douban.json"
     },
-
- 
-
     {
       "key": "美剧迷",
       "name": "美剧迷|网盘",
@@ -161,8 +158,7 @@
         "播放数组": "下载地址</h2>&&</ul>[不包含:网盘]",
         "播放列表": "<ul>&&</div>[包含:magnet]"
       },
-      "jar": "./jar/pg.jar"
-      
+      "jar": "./lib/XBPQ.jar"
     },
     {
       "key": "新6V",
@@ -181,7 +177,7 @@
       "type": 3,
       "api": "csp_TTian",
       "ext": "http://app.kzjtv.com$$$null$$$1",
-      "jar": "./lib/XBPQ.jar"
+      "jar": "./jar/pg.jar"
     },
     {
       "key": "賤賤",
@@ -192,7 +188,7 @@
       "changeable": 1,
       "ext": "./lib/jianpian.json$$$1",
       "timeout": 60,
-      "jar": "./lib/XBPQ.jar"
+      "jar": "./jar/pg.jar"
     },
     {
       "key": "JustLive",
@@ -210,7 +206,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "./jar/pg.jar"
     },
     {
       "key": "Ikanbot",
@@ -221,36 +218,37 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://v.ikanbot.com$$$proxy"
+      "ext": "https://v.ikanbot.com$$$proxy",
+      "jar": "./jar/pg.jar"
     },
-    
-		{
-			"key": "ikun",
-			"name": "ikun",
-			"type": 1,
-			"api": "http://127.0.0.1:10079/p/0/proxy/https://ikunzyapi.com/api.php/provide/vod/?",
-			"playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=",
-			"playerType":1,
-			"searchable": 1,
-			"changeable": 1
-		},
     {
-			"key": "異界",
-			"name": "異界",
-			"type": 3,
-			"api": "csp_Ysj",
-			"searchable": 1,
-			"changeable": 0
-		},
+      "key": "ikun",
+      "name": "ikun",
+      "type": 1,
+      "api": "http://127.0.0.1:10079/p/0/proxy/https://ikunzyapi.com/api.php/provide/vod/?",
+      "playUrl": "json:http://127.0.0.1:10079/parse/?thread=0&proxy=proxy&url=",
+      "playerType": 1,
+      "searchable": 1,
+      "changeable": 1
+    },
     {
-			"key": "短剧",
-			"name": "短剧",
-			"type": 3,
-			"api": "csp_Duanju",
-			"searchable": 0,
-			"changeable": 1,
-			"ext":"https://www.duanjutv.icu"
-		},
+      "key": "異界",
+      "name": "異界",
+      "type": 3,
+      "api": "csp_Ysj",
+      "searchable": 1,
+      "changeable": 0,
+      "jar": "./jar/pg.jar"
+    },
+    {
+      "key": "短剧",
+      "name": "短剧",
+      "type": 3,
+      "api": "csp_Duanju",
+      "searchable": 0,
+      "changeable": 1,
+      "ext": "https://www.duanjutv.icu"
+    },
     {
       "key": "360",
       "name": "三零｜影视｜弹幕",
