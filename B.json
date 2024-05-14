@@ -21,7 +21,8 @@
       "playerType": 2,
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "./jar/928.jar"
     },
     {
       "key": "爱酷",
@@ -49,15 +50,26 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9",
-      "jar": "./jar/qj.jar"
+      "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9"
     },
-
-
-    
-
-    {"key":"喵喵","name":"喵喵｜动漫｜蓝光","type":3,"api":"./lib1/drpy2.min.js","searchable":1,"changeable":1,"ext":"./js1/喵喵次元.js"},
-    {"key":"咕咕","name":"咕咕｜动漫｜蓝光","type":3,"api":"./lib1/drpy2.min.js","searchable":1,"changeable":1,"ext":"./js1/咕咕番.js"},
+    {
+      "key": "喵喵",
+      "name": "喵喵｜动漫｜蓝光",
+      "type": 3,
+      "api": "./lib1/drpy2.min.js",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "./js1/喵喵次元.js"
+    },
+    {
+      "key": "嗷呜",
+      "name": "嗷呜｜动漫｜蓝光",
+      "type": 3,
+      "api": "./lib1/drpy2.min.js",
+      "searchable": 1,
+      "changeable": 1,
+      "ext": "./js1/嗷呜动漫.js"
+    },
     {
       "key": "追剧",
       "name": "追剧｜影视｜蓝光",
