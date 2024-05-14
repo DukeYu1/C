@@ -166,6 +166,27 @@
       "quickSearch": 1,
       "filterable": 1
     },
+{
+   "key":"XBPQ_缘觉",
+   "name": "缘觉|XBPQ",
+   "jar": "https://d.kstore.space/download/2960/jar/XBPQ.jar",
+   "type": 3,
+   "api": "csp_XBPQ",
+   "ext":{ "数组": "<div class=\"card card-sm card-link\">&&</div>",
+   "图片":"img src=\"&&\"",
+   "链接":"href=\"&&\"",
+   "标题":"<h3 class=\"mb-0 card-title text-truncate\">&&</h3>",
+   "副标题": "span class=\"badge bg-pink position-absolute top-0 star-0\">&&</span>",
+   "线路数组":"<div class=\"d-flex\">&&</div>",
+   "播放链接":"href=\"/&&/play/&&.htm\"",
+   "播放数组":"<div class=\"btn-group\">&&</div>",
+   "分类数组": "<div class=\"col\">&&</div>",
+   "分类": "动作&爱情&喜剧&科幻&恐怖&战争",
+   "分类值":"dongzuo&aiqing&xiju&kehuan&kongbu&zhanzheng",
+    "分类url": "https://www.yjys.me/s/{cateId}/{catePg}"
+    }
+    },
+    
     {
       "key": "蚂蚁",
       "name": "蚂蚁影院",
