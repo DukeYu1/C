@@ -2815,7 +2815,7 @@
     }
   ],
   "ads": [
-    "mozai.4gtv.tv",
+    "mozai.4gtv.tv", "static-mozai.4gtv.tv",
     "mimg.0c1q0l.cn",
     "www.googletagmanager.com",
     "www.google-analytics.com",
@@ -2961,6 +2961,19 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
+
+,
+ {
+      "name": "4季",
+      "type": 0,
+      "playerType": 2,
+      "url": "https://linwei0718.github.io/iptvtw/4gtv.json",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
+
+
+    
     {
       "name": "嗅探",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
