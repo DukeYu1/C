@@ -2986,16 +2986,29 @@
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
     {
-      "name": "NOW",
+      "name": "NOW梯",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
       "url": "https://7220.kstore.space/NOW.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
+ {
+      "name": "smart",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
+      "type": 0,
+      "url": "https://gh.con.sh/https://raw.githubusercontent.com/DukeYu1/IPTV/main/SmartTV.txt?token=GHSAT0AAAAAACSLJZLBIEGPO2D2ZP25ILNQZSGOZXQ",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
+
+    
+
+
+    
     {
       "name": "MSSTER",
-      "ua": ",aptv,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
+      "ua": "aptv,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
       "type": 0,
       "url": "http://add.aptvapp.com/https://cdn.jsdelivr.net/gh/Kimentanm/aptv@master/m3u/bi.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3003,7 +3016,7 @@
     },
     {
       "name": "avto",
-      "ua": "  ,aptv Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97  ",
+      "ua": "aptv， Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97  ",
       "type": 0,
       "url": "https://iptv.org.ua/iptv/avto-full.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
