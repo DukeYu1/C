@@ -2975,13 +2975,15 @@
 
     
     {
-      "name": "4季",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
+      "name": "myTV SUPER",
+      "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5.2 Safari/605.1.15",
+      'Referer': 'https://www.mytvsuper.com/',
       "type": 0,
-      "url": "https://7220.kstore.space/4.json",
+      "url": "https://assets.livednow.com/m3u/mytvsuper.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
+
     {
       "name": "stream需梯子",
       "type": 0,
