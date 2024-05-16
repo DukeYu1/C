@@ -2995,7 +2995,14 @@
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
     
-
+ {
+      "name": "NOW",
+      "ua": "aptv",
+      "type": 0,
+      "url": "http://add.aptvapp.com/https://cdn.jsdelivr.net/gh/Kimentanm/aptv@master/m3u/bi.m3u",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
 
     
     {
