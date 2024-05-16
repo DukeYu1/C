@@ -2995,7 +2995,7 @@
       "name": "tv焦点 梯子刷新",
       "type": 0,
       "playerType": 2,
-      "url": "https://tang.hz.cz/zb/tv?type=169&token=f6c5f1ee",
+      "url": "https://tv.ykq001.cloud/focus",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
