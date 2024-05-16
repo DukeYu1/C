@@ -2985,8 +2985,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
- {
+    {
       "name": "NOW",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
@@ -2994,17 +2993,22 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-    
- {
-      "name": "NOW",
-      "ua": "aptv",
+    {
+      "name": "MSSTER",
+      "ua": ",aptv,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
       "type": 0,
       "url": "http://add.aptvapp.com/https://cdn.jsdelivr.net/gh/Kimentanm/aptv@master/m3u/bi.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-    
+    {
+      "name": "avto",
+      "ua": "  ,aptv Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97  ",
+      "type": 0,
+      "url": "https://iptv.org.ua/iptv/avto-full.m3u",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
     {
       "name": "tv焦点 梯子刷新",
       "type": 0,
@@ -3038,9 +3042,6 @@
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
- 
-
-    
     {
       "name": "嗅探",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
@@ -3057,7 +3058,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
- {
+    {
       "name": "4g需代理",
       "type": 0,
       "playerType": 1,
@@ -3066,8 +3067,6 @@
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
-
-    
     {
       "name": "stream需梯子",
       "type": 0,
