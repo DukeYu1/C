@@ -13,6 +13,39 @@
       "filterable": 0,
       "ext": "https://gitcode.net/wexfnw/wex/-/raw/master/douban.json"
     },
+
+{
+            "key": "第9放映室",
+            "name": "第9放映室|全民影院🎬",
+            "type": 3,
+            "api": "csp_XBPQ",
+            "playerType": 2,
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": {
+                "请求头": "手机",
+                "主页url": "https://www.9fy.cc/",
+                "数组": "class=\"stui-vodlist__box\">&&</li>",
+                "图片": "data-original=\"&&\"",
+                "链接": "href=\"&&\"",
+                "标题": "title=\"&&\"",
+                "副标题": "",
+                "简介": "<p class=\"col-pd\">&&</p",
+                "线路数组": "class=\"title\">&&</h3>[排序:五号线路>>]",
+                "线路标题": "✨PYLB专享✨+<img src=\"/zzd/icon/icon_30.png\"/>&&<",
+                "播放数组": "class=\"stui-content__playlist clearfix\">&&</ul>",
+                "播放列表": "<li >&&</li>",
+                "播放标题": ">&&</a",
+                "嗅探词": ".mp4#.m3u8#.flv",
+                "搜索url": "/d9search/{wd}----------{pg}---.html",
+                "分类url": "https://www.9fy.cc/d9show/{cateId}--{by}------{catePg}---.html[]",
+                "分类数组": "<a&&</a",
+                "分类标题": "text-muted\">&&</a",
+                "分类ID": "href=\"/d9show/&&-----------.html\""
+            }
+        },
+    
     {
       "key": "美剧迷",
       "name": "美剧迷|网盘",
@@ -597,6 +630,9 @@
       "ext": "https://sc1080.top|e59d44b2eef03ad9|e59d44b2eef03ad9",
       "jar": "./jar/qj.jar"
     },
+
+
+    
     {
       "key": "喵喵",
       "name": "喵喵｜动漫｜蓝光",
@@ -2945,8 +2981,28 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-    {
+
+{
       "name": "焦点",
+      "type": 0,
+      "playerType": 2,
+      "url": "https://7220.kstore.space/jd.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
+
+    {
+      "name": "tv焦点 梯子刷新",
+      "type": 0,
+      "playerType": 2,
+      "url": "https://tang.hz.cz/zb/tv?type=169&token=f6c5f1ee",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
+    },
+
+    
+    {
+      "name": "三哥焦点",
       "type": 0,
       "playerType": 2,
       "url": "https://tang.hz.cz/zb/tv?type=169&token=f6c5f1ee",
