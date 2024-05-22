@@ -3125,16 +3125,7 @@
       "name": "4季订阅",
       "type": 0,
       "playerType": 1,
-      "url": "http://144.24.216.28:5000/4gtv.m3u",
-      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
-    },
-
-    {"name": "江苏移动",
-      "type": 0,
-      "playerType": 1,
-      "url": "http://live.epg.gitv.tv:29010/tagNewestEpgList/JS_CMCC_CP/1/100/0.json",
+      "url": "172.233.67.137:5000/4gtv.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
@@ -3142,15 +3133,8 @@
 
 
 
-    {
-      "name": "g",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
-      "type": 0,
-      "url": "https://yang-1989.eu.org/m3u/Gather",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-    
+
+
     
     {
       "name": "嗅探",
