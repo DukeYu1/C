@@ -3133,7 +3133,7 @@
       "name": "4季订阅",
       "type": 0,
       "playerType": 1,
-      "url": "http://37.128.252.61:5200/4gtv.m3u",
+      "url": "http://123.108.70.221:5000/4gtv.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
