@@ -3166,7 +3166,11 @@
     
     {
       "name": "嗅探",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
+      
+      
+      
+      "ua": "cctv_app_tv",
+      "referer":"http://api.cctv.cn"
       "type": 0,
       "url": "https://d.kstore.space/download/7220/ysp.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
