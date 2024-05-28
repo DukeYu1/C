@@ -2971,6 +2971,9 @@
   "lives": [
     {
       "name": "live",
+ "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
+     
+      
       "playerType": 2,
       "url": "https://7220.kstore.space/B.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
