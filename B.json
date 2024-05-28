@@ -73,9 +73,6 @@
       },
       "jar": "./jar/pg.jar"
     },
-
-
-    
     {
       "key": "meowtv_qxys",
       "name": "秋霞┃影视",
@@ -2979,27 +2976,22 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-   {
+    {
       "name": "GAt",
       "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",
-       "playerType": 2,
+      "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/live",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-    
     {
       "name": "GA",
       "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
-  "playerType": 2,
+      "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/Gather",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-    
     {
       "name": "焦点",
       "type": 0,
@@ -3017,7 +3009,7 @@
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
- {
+    {
       "name": "晴天",
       "type": 0,
       "playerType": 1,
@@ -3026,9 +3018,7 @@
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
-    
-    
- {
+    {
       "name": "smart",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
       "type": 0,
@@ -3036,11 +3026,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-    
-
-
-    
     {
       "name": "aptv",
       "ua": "aptvplay,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
@@ -3057,7 +3042,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-{
+    {
       "name": "APTV-ORG",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
@@ -3065,8 +3050,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-{
+    {
       "name": "Samsung TVP lus",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
@@ -3074,8 +3058,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-    
-{
+    {
       "name": "XUMO ",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
@@ -3083,8 +3066,7 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-    
-{
+    {
       "name": "REDBOX tv",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
@@ -3092,7 +3074,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
     {
       "name": "Tubi",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
@@ -3101,12 +3082,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
-    
-    
- 
-
-    
     {
       "name": "iptv4直播",
       "type": 0,
@@ -3124,30 +3099,18 @@
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
-
-
-{
+    {
       "name": "4季订阅",
-  "ua":"AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)"，
+      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",
       "type": 0,
       "playerType": 1,
       "url": "http://37.128.252.61:5200/4gtv.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+      "logo": "http://epg.112114.xyz/logo/{name}.png"
     },
-
-
-
-
-
-    
     {
       "name": "嗅探",
-      
-      
-      
-    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
       "url": "https://d.kstore.space/download/7220/ysp.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3161,7 +3124,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-
     {
       "name": "stream需梯子",
       "type": 0,
