@@ -2993,28 +2993,11 @@
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
 
- {
-      "name": "myTV 1",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
-      "playerType": 2,
-      "url": "http://38.6.189.29:5860/mytvsuper.php",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-{
-      "name": "myTV 2",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
-      "playerType": 2,
-      "url": "http://www.52sw.top:678/mytvsuper.php",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-
 {
       "name": "litv梯子  ",
       "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "playerType": 2,
-      "url": "http://debian.52sw.top:678/iptv/mt-litv.txt",
+      "url": "https://7220.kstore.space/litv.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
