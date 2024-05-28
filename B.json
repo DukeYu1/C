@@ -3170,7 +3170,7 @@
       
       
       "ua": "cctv_app_tv",
-      "referer":"http://api.cctv.cn"
+      "referer":"http://api.cctv.cn",
       "type": 0,
       "url": "https://d.kstore.space/download/7220/ysp.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
