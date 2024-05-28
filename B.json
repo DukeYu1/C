@@ -2972,7 +2972,7 @@
     {
       "name": "live",
       "playerType": 2,
-      "url": "https://d.kstore.space/download/7220/B.txt",
+      "url": "https://7220.kstore.space/B.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
