@@ -3027,14 +3027,7 @@
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     },
     
-    {
-      "name": "NOW梯",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
-      "type": 0,
-      "url": "https://7220.kstore.space/NOW.txt",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
+    
  {
       "name": "smart",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97 ",
@@ -3111,23 +3104,7 @@
 
     
     
-    {
-      "name": "tv焦点 梯子刷新",
-      "type": 0,
-      "playerType": 2,
-      "url": "https://tv.ykq001.cloud/focus",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "三哥焦点",
-      "type": 0,
-      "playerType": 2,
-      "url": "https://tang.hz.cz/zb/tv?type=169&token=f6c5f1ee",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-
+ 
 
     
     {
@@ -3151,9 +3128,10 @@
 
 {
       "name": "4季订阅",
+  "ua":"AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)"，
       "type": 0,
       "playerType": 1,
-      "url": "http://123.108.70.221:5000/4gtv.m3u",
+      "url": "http://37.128.252.61:5200/4gtv.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
@@ -3169,8 +3147,7 @@
       
       
       
-      "ua": "cctv_app_tv",
-      "referer":"http://api.cctv.cn",
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6476.0 Safari/537.36 Edg/124.0.2478.97",
       "type": 0,
       "url": "https://d.kstore.space/download/7220/ysp.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
