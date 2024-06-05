@@ -3116,7 +3116,7 @@
       "name": "myTV SUPER",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
       "type": 0,
-      "url": "https://assets.livednow.com/m3u/mytvsuper.m3u",
+      "url": "http://epg.doube.eu.org/MyTvSuper.m3u"，
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
