@@ -2971,7 +2971,7 @@
   "lives": [
     {
       "name": "live",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
       "playerType": 2,
       "url": "https://7220.kstore.space/B.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -2979,7 +2979,7 @@
     },
     {
       "name": "GAt",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1",
       "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/live",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -2987,7 +2987,7 @@
     },
     {
       "name": "GA",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
       "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/Gather",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
