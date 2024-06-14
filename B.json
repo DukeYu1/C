@@ -2977,23 +2977,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-{
-      "name": "52top",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1",
-      "playerType": 2,
-      "url": "http://www.52sw.top:678/play/douyin.php",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
-
-    {
-      "name": "mytvsu",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,TiviMate/5.0.2/(android 11)",
-      "playerType": 2,
-      "url": "https://mytvsuper:860778.xyz",
-      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
-      "logo": "https://diyp1.112114.xyz/logo/{name}.png"
-    },
 
 {
       "name": "星世界",
