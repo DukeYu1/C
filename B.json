@@ -2991,7 +2991,7 @@
       "name": "GAt",
       "ua": "AptvPlayer/1.2.3,okhttp/4.3.1",
       "playerType": 2,
-      "url": "https://yang-1989.eu.org/m3u/live",
+      "url": "https://yang-1989.eu.org/m3u/Live",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
