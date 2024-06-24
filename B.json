@@ -2969,40 +2969,39 @@
     "https://lf1-cdn-tos.bytegoofy.com/obj/tos-cn-i-dy/455ccf9e8ae744378118e4bd289288dd"
   ],
   "lives": [
-
-{
+    {
       "name": "live",
       "url": "https://7220.kstore.space/B.txt",
-       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-       "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
-      "timeout":"7",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "timeout": "7",
       "playerType": 2
     },
-
-
-     {
+    {
       "name": "鹏博士",
       "url": "https://7220.kstore.space/鹏博士.txt",
-       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-       "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
-      "timeout":"5",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "timeout": "5",
       "playerType": 2
     },
-    
-   {
+
+
+    {
       "name": "重庆有线",
       "url": "http://222.211.73.100:15833/133.txt",
-       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-       "ua": "AptvPlayer/1.2.3，
-     "timeout":"5"，
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "timeout": "5",
       "playerType": 2
     },
-    
 
-{
+
+    
+    {
       "name": "星世界",
       "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
       "playerType": 2,
@@ -3010,7 +3009,6 @@
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
-    
     {
       "name": "GAt",
       "ua": "AptvPlayer/1.2.3,okhttp/4.3.1",
