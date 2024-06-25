@@ -3125,7 +3125,7 @@
       "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",
       "type": 0,
       "playerType": 1,
-      "url": "http://37.128.252.61:5200/4gtv.m3u",
+      "url": "http://150.230.251.186:5000/4gtv.m3u",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png"
     },
