@@ -2993,6 +2993,7 @@
       "url": "https://7220.kstore.space/重庆有线.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+  "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",
        "playerType": 2
     },
 
