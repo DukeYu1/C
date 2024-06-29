@@ -2974,7 +2974,8 @@
       "url": "https://7220.kstore.space/B.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81  ",
+        "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      
       "timeout": "7",
       "playerType": 2
     },
@@ -2983,7 +2984,7 @@
       "url": "https://7220.kstore.space/鹏博士.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
       "timeout": "5",
       "playerType": 2
     },
@@ -3008,7 +3009,7 @@
     
     {
       "name": "星世界",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
       "playerType": 2,
       "url": "https://www.sv6-douyin-cloudfare.cloudns.ch/duanwukl.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3024,7 +3025,7 @@
     },
     {
       "name": "GA",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
       "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/Gather",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3032,7 +3033,7 @@
     },
     {
       "name": "litv梯子  ",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81",
+      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "playerType": 2,
       "url": "https://7220.kstore.space/litv.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3053,7 +3054,7 @@
       "url": "https://7220.kstore.space/ouhua.txt",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36"
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36"
     },
     {
       "name": "晴天",
@@ -3062,11 +3063,11 @@
       "url": "https://7220.kstore.space/晴天.txt",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36"
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36"
     },
     {
       "name": "APTV-ORG",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://iptv-org.github.io/iptv/index.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3074,7 +3075,7 @@
     },
     {
       "name": "Samsung TV Plus",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://i.mjh.nz/SamsungTVPlus/all.m3u8",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3082,7 +3083,7 @@
     },
     {
       "name": "XUMO ",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://apsattv.com/xumo.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3090,7 +3091,7 @@
     },
     {
       "name": "REDBOX tv",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://apsattv.com/redbox.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3098,7 +3099,7 @@
     },
     {
       "name": "Tubi",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://apsattv.com/tubi.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3119,7 +3120,7 @@
       "url": "https://7220.kstore.space/4季.txt",
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67"
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81"
     },
     {
       "name": "4季订阅",
@@ -3132,7 +3133,7 @@
     },
     {
       "name": "嗅探",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "https://d.kstore.space/download/7220/ysp.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3140,7 +3141,7 @@
     },
     {
       "name": "myTV SUPER",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
       "url": "http://www.52sw.top:678/play/mytvsuper",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3148,7 +3149,7 @@
     },
     {
       "name": "smart梯子",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
       "type": 0,
       "url": "https://7220.kstore.space/smart.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
