@@ -2974,7 +2974,7 @@
       "url": "https://7220.kstore.space/B.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-      "ua": "AptvPlayer/1.2.3,okhttp/3.2.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11)",,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81  ",
       "timeout": "7",
       "playerType": 2
     },
@@ -2983,7 +2983,7 @@
       "url": "https://7220.kstore.space/鹏博士.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png",
-      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
       "timeout": "5",
       "playerType": 2
     },
@@ -3008,7 +3008,7 @@
     
     {
       "name": "星世界",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
       "playerType": 2,
       "url": "https://www.sv6-douyin-cloudfare.cloudns.ch/duanwukl.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3024,7 +3024,7 @@
     },
     {
       "name": "GA",
-      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67 ",
+      "ua": "AptvPlayer/1.2.3,okhttp/4.3.1,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81 ",
       "playerType": 2,
       "url": "https://yang-1989.eu.org/m3u/Gather",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
@@ -3032,7 +3032,7 @@
     },
     {
       "name": "litv梯子  ",
-      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.6509.0 Safari/537.36 Edg/125.0.2535.67",
+      "ua": "AptvPlayer/1.2.3,TiviMate/5.0.2/(android 11),Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6562.0 Safari/537.36 Edg/126.0.2592.81",
       "playerType": 2,
       "url": "https://7220.kstore.space/litv.txt",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
