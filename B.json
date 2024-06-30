@@ -3189,7 +3189,7 @@
       "name": "myTV SUPER",
       "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81",
       "type": 0,
-      "url": "http://www.52sw.top:678/play/mytvsuper",
+      "url": "http://epg.doube.eu.org/MyTvSuper.m3u",
       "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
