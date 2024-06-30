@@ -2999,12 +2999,58 @@
     },
 
 
-    
+    {
+      "name": "银河",
+      "url": "https://7220.kstore.space/YIHE.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "timeout": "5",
+      "playerType": 2
+    },
   
      
+     {
+      "name": "蜀小果",
+      "url": "https://7220.kstore.space/蜀小果.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "timeout": "5",
+      "playerType": 2
+    },
+
+ {
+      "name": "海淀",
+      "url": "https://7220.kstore.space/海淀.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "timeout": "5",
+      "playerType": 2
+    },
+
+ {
+      "name": "dyndnstv",
+      "url": "https://7220.kstore.space/dyndnstv.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "timeout": "5",
+      "playerType": 2
+    },
+
+{
+      "name": "北方广电",
+      "url": "https://7220.kstore.space/bfgd.txt",
+      "epg": "http://diyp1.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://diyp1.112114.xyz/logo/{name}.png",
+      "ua": "AptvPlayer/1.2.3,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/ 128.0.6565.0 Safari/537.36 Edg/126.0.2592.81 ",
+      "timeout": "5",
+      "playerType": 2
+    },
+
     
-
-
 
     
     {
@@ -3114,7 +3160,7 @@
       "logo": "https://diyp1.112114.xyz/logo/{name}.png"
     },
     {
-      "name": "4季+",
+      "name": "4季嗅探 梯",
       "type": 0,
       "playerType": 1,
       "url": "https://7220.kstore.space/4季.txt",
