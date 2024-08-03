@@ -1,1 +1,28 @@
-1
+{
+  "lives": [
+    {
+      "name": "iTV",
+        "type": 3,
+
+      
+      "api": ".JS/itv1.js",
+      "url": " JS/中国移动iTV.txt"
+      "ext": ""
+      
+    },
+    {
+      "name": "ETH",
+     "api": "https://"tang.hz.cz/js/ethtv.js"，
+       "type": 3,
+      "ua": "okhttp/4.12.0",
+     
+    },
+    {
+      "name": "jrys",
+    "api":  "JS/jrys-3.6.0.1.js"
+          "type": 3,
+  
+     
+    },
+  ]
+}
