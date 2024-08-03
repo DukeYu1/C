@@ -1,4 +1,8 @@
 {
+"spider":"./jar/custom_spider.jar",
+
+
+{
   "lives": [
     {
       "name": "iTV",
@@ -27,3 +31,6 @@
     }
   ]
 }
+]
+}
+
