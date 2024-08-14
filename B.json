@@ -9,6 +9,19 @@
       "url": " ./JS/中国移动iTV.txt",
       "ext": ""
     },
+{
+      "name": "SMT(翻)",
+      "boot": false,
+      "pass": true,
+      "url": "https://t4.doube.eu.org/smt.txt",
+      "logo": "https://live.fanmingming.com/tv/{name}.png",
+      "header": {
+        "CLIENT-IP": "127.0.0.1",
+        "X-FORWARDED-FOR": "127.0.0.1"
+      }
+    }
+
+    
     {
       "name": "ETH",
       "api": "https://tang.hz.cz/js/ethtv.js",
@@ -21,9 +34,10 @@
       "type": 3
     },
     {
-      "name": "jrys",
-      "api": "./JS/jrys-3.6.0.1.js",
-      "type": 3
+      "name": "江苏联通",
+      "api": "https://panel3.serv00.com/file_manager/?goto=my-files%2Fdomains%2Fyushenluo.serv00.net%2Fpublic_html%2FJIANGSU.js",
+ 
+    "type": 3
     }
   ]
 }
