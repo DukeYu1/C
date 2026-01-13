@@ -9,7 +9,7 @@ class Spider(Spider):
     def init(self, extend=""):
         self.host = 'https://ev5356.970xw.com'
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Linux; Android 9; V2196A Build/PQ3A.190705.08211809; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 Mobile Safari/537.36;webank/h5face;webank/1.0;netType:NETWORK_WIFI;appVersion:416;packageName:com.jp3.xg3',
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 10; V2196A Build/PQ3A.190705.08211809; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/145.0.7626.0 Mobile Safari/537.36;webank/h5face;webank/1.0;netType:NETWORK_WIFI;appVersion:416;packageName:com.jp3.xg3',
             'Referer': self.host
         }
         self.ihost = self.imgsite()
@@ -151,7 +151,7 @@ class Spider(Spider):
         data = requests.get(url, headers=self.headers).json()
         res = data['data']
         
-        play_from = ['老僧酿酒、边酿边播']
+        play_from = ['yu']
         play_url = []
         
         # 寻找并处理“常规线路”
