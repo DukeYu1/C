@@ -1,3 +1,4 @@
+
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
@@ -30,6 +31,10 @@ class Spider(Spider):
             self.is_proxy = True
         else:
             self.is_proxy = False
+        
+        # 设置外部代理服务器地址和端口
+        self.proxy_host = "127.0.0.1"
+        self.proxy_port = "9978"
         pass
 
     def getDependence(self):
@@ -42,7 +47,7 @@ class Spider(Spider):
         pass
 
     def liveContent(self, url):
-        # 频道数据 - 使用与参考代码相同的格式
+        # 频道数据
         channels = [
             # 格式: [显示名称, tvg名称, logoID, 分组, 频道ID, 视频参数, 音频参数]
             ["民視", "民視", "民視", "綜合頻道", "4gtv-4gtv002", 1, 11],
@@ -145,16 +150,15 @@ class Spider(Spider):
         for channel in channels:
             name, tvg_name, logo_id, group, channel_id, qlt, alt = channel
             
-            # 使用TVBox内部代理格式
-            # proxy://do=py&type=m3u8&pid=channel_id,qlt,alt
-            url = f"proxy://do=py&type=m3u8&pid={channel_id},{qlt},{alt}"
+            # 生成外部代理URL格式
+            # http://127.0.0.1:9978/proxy?do=py&type=m3u8&pid=channel_id,qlt,alt
+            url = f"http://{self.proxy_host}:{self.proxy_port}/proxy?do=py&type=m3u8&pid={channel_id},{qlt},{alt}"
             
             # 如果有扩展参数，添加到URL
             if self.extend:
                 url += f"&data={self.extend}"
             
-            # 添加频道信息 - 使用参考代码的格式
-            # tvg-logo使用epg.iill.top的logo地址
+            # 添加频道信息
             logo_url = f"https://epg.iill.top/logo/{logo_id}.png"
             result.append(f'#EXTINF:-1 tvg-id="{tvg_name}" tvg-name="{name}" tvg-logo="{logo_url}" group-title="{group}",{name}')
             result.append(url)
@@ -183,8 +187,10 @@ class Spider(Spider):
         return {}
 
     def localProxy(self, params):
-        # TVBox通过proxy://do=py调用此方法
-        # params是字典，包含do, type, pid等参数
+        # 注意：这个方法是TVBox内部调用的，但我们现在使用外部代理
+        # 所以这里实际上不会被调用，除非TVBox直接调用这个插件
+        
+        # 为了兼容性，保留这个方法
         if params.get('do') == 'py':
             type_param = params.get('type', '')
             
@@ -217,16 +223,11 @@ class Spider(Spider):
             # 生成TS片段URL，与原始PHP代码格式一致
             ts_url = f'https://ntd-tgc.cdn.hinet.net/live/pool/{channel_id}/litv-pc/{channel_id}-avc1_6000000={qlt}-mp4a_134000_zho={alt}-begin={t}0000000-dur=40000000-seq={timestamp}.ts'
             
-            # 如果需要代理，使用内部代理格式
-            if self.is_proxy:
-                # base64编码URL
-                encoded_url = self.b64encode(ts_url)
-                # 使用TVBox内部代理格式
-                ts_url = f"proxy://do=py&type=ts&url={encoded_url}"
-                if self.extend:
-                    ts_url += f"&data={self.extend}"
-
-            m3u8_text += f'#EXTINF:4,\n{ts_url}\n'
+            # 生成外部代理TS URL格式
+            encoded_url = self.b64encode(ts_url)
+            proxy_ts_url = f"http://{self.proxy_host}:{self.proxy_port}/proxy?do=py&type=ts&url={encoded_url}"
+            
+            m3u8_text += f'#EXTINF:4,\n{proxy_ts_url}\n'
             timestamp += 1
             t += 4
         
@@ -276,24 +277,135 @@ class Spider(Spider):
         return base64.b64decode(data.encode('utf-8')).decode('utf-8')
 
 
+# ================================================
+# 以下是独立的代理服务器代码，用于处理外部请求
+# ================================================
+
+import flask
+from flask import Flask, request, Response, stream_with_context
+
+# 创建独立的代理服务器应用
+proxy_app = Flask(__name__)
+
+# 创建Spider实例用于处理请求
+spider_instance = Spider()
+spider_instance.init('')
+
+@proxy_app.route('/proxy', methods=['GET'])
+def handle_proxy():
+    """处理外部代理请求"""
+    do_type = request.args.get('do', '').strip()
+    content_type = request.args.get('type', '').strip()
+    pid = request.args.get('pid', '').strip()
+    url = request.args.get('url', '').strip()
+    data = request.args.get('data', '').strip()
+    
+    if do_type != 'py':
+        return Response('Invalid request', status=400, mimetype='text/plain')
+    
+    if content_type == 'm3u8':
+        # 处理m3u8请求
+        if not pid:
+            return Response('Missing pid parameter', status=400, mimetype='text/plain')
+        
+        # 如果有data参数，重新初始化spider
+        if data:
+            spider_instance.init(data)
+        
+        # 调用spider的proxyM3u8方法
+        result = spider_instance.proxyM3u8({'do': 'py', 'type': 'm3u8', 'pid': pid})
+        
+        if isinstance(result, list) and len(result) >= 3:
+            status, content_type, content = result[0], result[1], result[2]
+            return Response(content, status=status, mimetype=content_type)
+        else:
+            return Response('Internal server error', status=500, mimetype='text/plain')
+    
+    elif content_type == 'ts':
+        # 处理ts片段请求
+        if not url:
+            return Response('Missing url parameter', status=400, mimetype='text/plain')
+        
+        # 如果有data参数，重新初始化spider
+        if data:
+            spider_instance.init(data)
+        
+        # 调用spider的get_ts方法
+        result = spider_instance.get_ts({'do': 'py', 'type': 'ts', 'url': url})
+        
+        if isinstance(result, list) and len(result) >= 3:
+            status, content_type, content = result[0], result[1], result[2]
+            
+            if callable(content):  # 如果是生成器函数
+                return Response(
+                    stream_with_context(content()),
+                    status=status,
+                    mimetype=content_type,
+                    headers={
+                        'Content-Disposition': 'inline; filename=stream.ts',
+                        'X-Accel-Buffering': 'no',
+                        'Cache-Control': 'no-cache'
+                    }
+                )
+            else:  # 如果是普通内容
+                return Response(content, status=status, mimetype=content_type)
+        else:
+            return Response('Internal server error', status=500, mimetype='text/plain')
+    
+    else:
+        return Response('Invalid type parameter', status=400, mimetype='text/plain')
+
+
+def run_proxy_server(host='0.0.0.0', port=9978):
+    """运行代理服务器"""
+    print(f"代理服务器启动在: http://{host}:{port}")
+    print(f"主播放列表: http://{host}:{port}/proxy?do=py&type=m3u")
+    print(f"频道示例: http://{host}:{port}/proxy?do=py&type=m3u8&pid=litv-ftv10,1,7")
+    proxy_app.run(host=host, port=port, debug=False)
+
+
 if __name__ == '__main__':
     # 测试代码
+    print("=" * 50)
+    print("测试Spider类生成直播列表:")
+    print("=" * 50)
+    
     spider = Spider()
     spider.init('{"proxy": null}')
     
     # 生成直播列表
     live_content = spider.liveContent("")
-    print("生成的M3U内容（前300字符）：")
-    print(live_content[:300] + "..." if len(live_content) > 300 else live_content)
+    print("生成的M3U内容（前500字符）：")
+    print(live_content[:500] + "..." if len(live_content) > 500 else live_content)
     
     # 测试M3U8生成
-    print("\n测试M3U8生成：")
+    print("\n" + "=" * 50)
+    print("测试M3U8生成:")
+    print("=" * 50)
+    
     test_params = {'do': 'py', 'type': 'm3u8', 'pid': 'litv-ftv10,1,7'}
     m3u8_result = spider.proxyM3u8(test_params)
     if isinstance(m3u8_result, list) and len(m3u8_result) > 2:
-        print("生成的M3U8内容（前300字符）：")
-        print(m3u8_result[2][:300] + "..." if len(m3u8_result[2]) > 300 else m3u8_result[2])
+        print("生成的M3U8内容（前500字符）：")
+        print(m3u8_result[2][:500] + "..." if len(m3u8_result[2]) > 500 else m3u8_result[2])
+        
+        # 检查TS URL格式
+        if "http://127.0.0.1:9978/proxy?do=py&type=ts&url=" in m3u8_result[2]:
+            print("\n✓ TS URL格式正确: 使用 http://127.0.0.1:9978/proxy?do=py&type=ts&url= 格式")
+        else:
+            print("\n✗ TS URL格式不正确")
     else:
         print("M3U8生成失败:", m3u8_result)
+    
+    # 启动代理服务器
+    print("\n" + "=" * 50)
+    print("启动代理服务器:")
+    print("=" * 50)
+    print("按 Ctrl+C 停止服务器")
+    
+    try:
+        run_proxy_server()
+    except KeyboardInterrupt:
+        print("\n代理服务器已停止")
 ```
 
