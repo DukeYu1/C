@@ -1,318 +1,299 @@
-
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# 脚本生成时间：2026-01-23 04:00:20
-# 转换为Python版本 - 输出格式为代理URL形式
-
+# @Author  : AI助手转换
+# @Time    : 2026-01-23 04:00:20
+import base64
+import sys
 import time
-import urllib.parse
-from flask import Flask, request, Response, stream_with_context
+import json
 import requests
 
-app = Flask(__name__)
-
-# 频道数据
-n = {
-    # 以下参数为脚本每4小时自动生成一次
-    "4gtv-4gtv002": [1, 11, "民視", "綜合頻道", "民視"],
-    "4gtv-4gtv003": [1, 7, "民視第一台", "綜合頻道", "民視第一台"],
-    "litv-ftv13": [1, 7, "民視新聞台", "新聞財經", "民視新聞台"],
-    "4gtv-4gtv001": [1, 7, "民視台灣台", "綜合頻道", "民視台灣台"],
-    "litv-ftv09": [1, 6, "民視影劇台", "電影戲劇", "民視影劇台"],
-    "litv-ftv07": [1, 6, "民視旅遊台", "科教紀實", "民視旅遊台"],
-    "4gtv-4gtv004": [1, 9, "民視綜藝台", "綜藝娛樂", "民視綜藝台"],
-    "4gtv-4gtv040": [1, 7, "中视", "綜合頻道", "中視"],
-    "4gtv-4gtv074": [1, 6, "中视新闻", "新聞財經", "中視新聞台"],
-    "4gtv-4gtv009": [2, 9, "中天新闻", "新聞財經", "中天新聞台"],
-    "4gtv-4gtv041": [1, 7, "華視", "綜合頻道", "華視"],
-    "4gtv-4gtv052": [1, 6, "華視新聞", "新聞財經", "華視新聞"],
-    "4gtv-4gtv046": [1, 7, "靖天綜合台", "綜合頻道", "靖天綜合台"],
-    "4gtv-4gtv063": [1, 8, "靖天國際台", "綜合頻道", "靖天國際台"],
-    "4gtv-4gtv058": [1, 9, "靖天戲劇台", "電影戲劇", "靖天戲劇台"],
-    "4gtv-4gtv047": [1, 2, "靖天日本台", "綜合頻道", "靖天日本台"],
-    "4gtv-4gtv055": [1, 9, "靖天映畫台", "電影戲劇", "靖天映畫台"],
-    "4gtv-4gtv044": [1, 7, "靖天卡通台", "卡通動漫", "靖天卡通台"],
-    "4gtv-4gtv062": [1, 9, "靖天育樂台", "綜藝娛樂", "靖天育樂台"],
-    "4gtv-4gtv065": [1, 9, "靖天資訊台", "新聞財經", "靖天資訊台"],
-    "4gtv-4gtv061": [1, 7, "靖天電影台", "電影戲劇", "靖天電影台"],
-    "4gtv-4gtv054": [1, 9, "靖天歡樂台", "綜藝娛樂", "靖天歡樂台"],
-    "litv-xinchuang12": [10003, 20000, "龍華偶像台", "電影戲劇", "龍華偶像台"],
-    "litv-xinchuang01": [10002, 20000, "龍華卡通台", "卡通動漫", "龍華卡通台"],
-    "litv-xinchuang18": [10003, 20000, "龍華戲劇台", "電影戲劇", "龍華戲劇台"],
-    "litv-xinchuang11": [10003, 20000, "龍華日韓台", "電影戲劇", "龍華日韓台"],
-    "litv-xinchuang21": [10003, 20000, "龍華經典台", "電影戲劇", "龍華經典台"],
-    "litv-xinchuang03": [10003, 20000, "龍華電影台", "電影戲劇", "龍華電影台"],
-    "litv-xinchuang02": [10003, 20000, "龍華洋片台", "電影戲劇", "龍華洋片台"],
-    "4gtv-4gtv045": [1, 7, "靖洋戲劇台", "電影戲劇", "靖洋戲劇台"],
-    "4gtv-4gtv057": [1, 7, "靖洋卡通-Nice-Bingo", "卡通動漫", "靖洋卡通NiceBingo"],
-    "litv-longturn14": [1, 6, "寰宇新聞台", "新聞財經", "寰宇新聞台"],
-    "4gtv-4gtv156": [1, 8, "寰宇新聞台灣台", "新聞財經", "寰宇新聞台灣台"],
-    "4gtv-4gtv158": [1, 2, "寰宇財經台", "新聞財經", "寰宇財經台"],
-    "4gtv-4gtv068": [1, 8, "TVBS欢乐", "綜藝娛樂", "TVBS歡樂台"],
-    "4gtv-4gtv067": [1, 9, "TVBS精采", "綜藝娛樂", "TVBS精采台"],
-    "4gtv-4gtv034": [1, 7, "八大精彩台", "綜藝娛樂", "八大精彩台"],
-    "4gtv-4gtv039": [1, 6, "八大綜藝台", "綜藝娛樂", "八大綜藝台"],
-    "4gtv-4gtv070": [1, 9, "ELTA娛樂", "綜藝娛樂", "ELTA娛樂台"],
-    "litv-xinchuang20": [10003, 20000, "ELTA生活英語", "科教紀實", "ELTV生活英語"],
-    "4gtv-4gtv152": [1, 7, "东森新闻", "新聞財經", "東森新聞"],
-    "4gtv-4gtv153": [1, 6, "东森财经", "新聞財經", "東森財經新聞"],
-    "4gtv-4gtv075": [1, 6, "鏡電視新聞台", "新聞財經", "鏡電視新聞台"],
-    "4gtv-4gtv076": [1, 7, "亞洲旅遊台", "科教紀實", "亞洲旅遊台"],
-    "4gtv-4gtv053": [1, 9, "GINX-Esports-TV", "體育競技", "GINXEsportsTV"],
-    "4gtv-4gtv014": [1, 6, "时尚运动X", "體育競技", "時尚運動X"],
-    "4gtv-4gtv101": [1, 6, "智林体育", "體育競技", "智林體育台"],
-    "4gtv-4gtv077": [1, 5, "TraceSports", "體育競技", "TraceSports"],
-    "4gtv-4gtv011": [1, 7, "影迷數位電影台", "電影戲劇", "影迷數位電影台"],
-    "4gtv-4gtv017": [1, 7, "AMC-最愛電影", "電影戲劇", "AMC電影台"],
-    "4gtv-4gtv042": [1, 7, "公視戲劇台", "電影戲劇", "公視戲劇台"],
-    "4gtv-4gtv049": [1, 9, "采昌影劇台", "電影戲劇", "采昌影劇台"],
-    "litv-xinchuang22": [10003, 20000, "台灣戲劇台", "電影戲劇", "台灣戲劇台"],
-    "litv-ftv15": [1, 7, "影迷數位紀實台", "科教紀實", "影迷數位紀實台"],
-    "4gtv-4gtv018": [1, 7, "達文西頻道", "科教紀實", "達文西頻道"],
-    "4gtv-4gtv059": [1, 7, "Classica-古典樂", "科教紀實", "Classica古典樂"],
-    "4gtv-4gtv083": [1, 6, "Mezzo-Live", "科教紀實", "MezzoLive"],
-    "4gtv-4gtv006": [1, 10, "豬哥亮歌廳秀", "綜藝娛樂", "豬哥亮歌廳秀"],
-    "4gtv-4gtv082": [1, 7, "Trace-Urban", "體育競技", "TraceUrban"],
-    "4gtv-4gtv016": [1, 7, "韩国娱乐台KMTV", "綜藝娛樂", "韓國娛樂台"],
-    "4gtv-4gtv079": [1, 8, "Arirang-TV", "新聞財經", "ArirangTV"],
-    "litv-ftv10": [1, 7, "MCE", "電影戲劇", "MCE 我的歐洲電影"],
-    "4gtv-4gtv104": [1, 7, "第1商业台", "新聞財經", "第1商業台"],
-    "4gtv-4gtv110": [1, 6, "Pet-Club-TV", "科教紀實", "Pet Club TV"],
-    "litv-xinchuang19": [10003, 20000, "Smart-知識台", "科教紀實", "Smart知識台"],
-    "4gtv-4gtv013": [1, 7, "視納華仁紀實頻道", "科教紀實", "視納華仁紀實頻道"],
-    "4gtv-4gtv043": [1, 7, "客家電視台", "綜合頻道", "客家電視台"],
-    "litv-ftv16": [1, 6, "好消息", "綜合頻道", "好消息"],
-    "litv-ftv17": [1, 6, "好消息2台", "綜合頻道", "好消息2台"],
-    "4gtv-4gtv084": [1, 7, "國會頻道1", "科教紀實", "國會頻道1"],
-    "4gtv-4gtv085": [1, 6, "國會頻道2", "科教紀實", "國會頻道2"],
-
-    # 如遇到音视频参数变动，需手动修改以下数字部分
-    "4gtv-4gtv155": [1, 7, "民視", "綜合頻道", "民視"],
-    "4gtv-4gtv080": [1, 8, "中视经典", "綜藝娛樂", "中視經典台"],
-    "4gtv-4gtv064": [1, 9, "中視菁采台", "綜藝娛樂", "中視菁采台"],
-    "4gtv-4gtv109": [1, 9, "中天亚洲", "綜合頻道", "中天亞洲台"],
-    "4gtv-4gtv073": [1, 6, "TVBS", "綜合頻道", "TVBS"],
-    "4gtv-4gtv072": [1, 6, "TVBS新闻", "新聞財經", "TVBS新聞台"],
-    "4gtv-4gtv066": [1, 6, "台視", "綜合頻道", "台視"],
-    "4gtv-4gtv051": [1, 6, "台視新聞台", "新聞財經", "台視新聞台"],
-    "4gtv-4gtv056": [1, 6, "台視財經台", "新聞財經", "台視財經台"],
-    "litv-xinchuang07": [10003, 20000, "博斯运动1", "體育競技", "博斯運動一台"],
-    "litv-xinchuang08": [10003, 20000, "博斯运动1", "體育競技", "博斯運動二台"],
-    "litv-xinchuang10": [10003, 20000, "博斯无限", "體育競技", "博斯無限台"],
-    "litv-xinchuang13": [10003, 20000, "博斯无限2", "體育競技", "博斯無限二台"],
-    "litv-xinchuang09": [10003, 20000, "博斯网球", "體育競技", "博斯網球台"],
-    "litv-xinchuang05": [10003, 20000, "博斯高球1", "體育競技", "博斯高球台"],
-    "litv-xinchuang06": [10003, 20000, "博斯高球2", "體育競技", "博斯高球二台"],
-    "litv-xinchuang04": [10003, 20000, "博斯魅力", "體育競技", "博斯魅力台"],
-    "4gtv-4gtv010": [1, 7, "非凡新聞台", "新聞財經", "非凡新聞台"],
-    "4gtv-4gtv048": [1, 7, "非凡商業台", "新聞財經", "非凡商業台"],
-    "litv-ftv03": [1, 7, "VOA-美國之音", "新聞財經", "VOA美國之音"],
-}
+sys.path.append('..')
+from base.spider import Spider
 
 
-def get_curl(url: str, download: bool = False):
-    """
-    模拟PHP的curl函数
-    """
-    try:
-        if download:
-            # 流式下载
-            response = requests.get(url, stream=True, verify=False, timeout=30)
+class Spider(Spider):
+    def getName(self):
+        return "Litv台湾直播"
+
+    def init(self, extend):
+        self.extend = extend
+        try:
+            self.extendDict = json.loads(extend)
+        except:
+            self.extendDict = {}
+
+        proxy = self.extendDict.get('proxy', None)
+        if proxy is not None:
+            self.proxy = proxy
+            self.is_proxy = True
+        else:
+            self.is_proxy = False
+        pass
+
+    def getDependence(self):
+        return []
+
+    def isVideoFormat(self, url):
+        pass
+
+    def manualVideoCheck(self):
+        pass
+
+    def liveContent(self, url):
+        # 频道数据 - 使用与参考代码相同的格式
+        channels = [
+            # 格式: [显示名称, tvg名称, logoID, 分组, 频道ID, 视频参数, 音频参数]
+            ["民視", "民視", "民視", "綜合頻道", "4gtv-4gtv002", 1, 11],
+            ["民視第一台", "民視第一台", "民視第一台", "綜合頻道", "4gtv-4gtv003", 1, 7],
+            ["民視新聞台", "民視新聞台", "民視新聞台", "新聞財經", "litv-ftv13", 1, 7],
+            ["民視台灣台", "民視台灣台", "民視台灣台", "綜合頻道", "4gtv-4gtv001", 1, 7],
+            ["民視影劇台", "民視影劇台", "民視影劇台", "電影戲劇", "litv-ftv09", 1, 6],
+            ["民視旅遊台", "民視旅遊台", "民視旅遊台", "科教紀實", "litv-ftv07", 1, 6],
+            ["民視綜藝台", "民視綜藝台", "民視綜藝台", "綜藝娛樂", "4gtv-4gtv004", 1, 9],
+            ["中視", "中視", "中視", "綜合頻道", "4gtv-4gtv040", 1, 7],
+            ["中視新聞台", "中視新聞台", "中視新聞台", "新聞財經", "4gtv-4gtv074", 1, 6],
+            ["中天新聞台", "中天新聞台", "中天新聞台", "新聞財經", "4gtv-4gtv009", 2, 9],
+            ["華視", "華視", "華視", "綜合頻道", "4gtv-4gtv041", 1, 7],
+            ["華視新聞", "華視新聞", "華視新聞", "新聞財經", "4gtv-4gtv052", 1, 6],
+            ["靖天綜合台", "靖天綜合台", "靖天綜合台", "綜合頻道", "4gtv-4gtv046", 1, 7],
+            ["靖天國際台", "靖天國際台", "靖天國際台", "綜合頻道", "4gtv-4gtv063", 1, 8],
+            ["靖天戲劇台", "靖天戲劇台", "靖天戲劇台", "電影戲劇", "4gtv-4gtv058", 1, 9],
+            ["靖天日本台", "靖天日本台", "靖天日本台", "綜合頻道", "4gtv-4gtv047", 1, 2],
+            ["靖天映畫台", "靖天映畫台", "靖天映畫台", "電影戲劇", "4gtv-4gtv055", 1, 9],
+            ["靖天卡通台", "靖天卡通台", "靖天卡通台", "卡通動漫", "4gtv-4gtv044", 1, 7],
+            ["靖天育樂台", "靖天育樂台", "靖天育樂台", "綜藝娛樂", "4gtv-4gtv062", 1, 9],
+            ["靖天資訊台", "靖天資訊台", "靖天資訊台", "新聞財經", "4gtv-4gtv065", 1, 9],
+            ["靖天電影台", "靖天電影台", "靖天電影台", "電影戲劇", "4gtv-4gtv061", 1, 7],
+            ["靖天歡樂台", "靖天歡樂台", "靖天歡樂台", "綜藝娛樂", "4gtv-4gtv054", 1, 9],
+            ["龍華偶像台", "龍華偶像台", "龍華偶像台", "電影戲劇", "litv-xinchuang12", 10003, 20000],
+            ["龍華卡通台", "龍華卡通台", "龍華卡通台", "卡通動漫", "litv-xinchuang01", 10002, 20000],
+            ["龍華戲劇台", "龍華戲劇台", "龍華戲劇台", "電影戲劇", "litv-xinchuang18", 10003, 20000],
+            ["龍華日韓台", "龍華日韓台", "龍華日韓台", "電影戲劇", "litv-xinchuang11", 10003, 20000],
+            ["龍華經典台", "龍華經典台", "龍華經典台", "電影戲劇", "litv-xinchuang21", 10003, 20000],
+            ["龍華電影台", "龍華電影台", "龍華電影台", "電影戲劇", "litv-xinchuang03", 10003, 20000],
+            ["龍華洋片台", "龍華洋片台", "龍華洋片台", "電影戲劇", "litv-xinchuang02", 10003, 20000],
+            ["靖洋戲劇台", "靖洋戲劇台", "靖洋戲劇台", "電影戲劇", "4gtv-4gtv045", 1, 7],
+            ["靖洋卡通NiceBingo", "靖洋卡通NiceBingo", "靖洋卡通-Nice-Bingo", "卡通動漫", "4gtv-4gtv057", 1, 7],
+            ["寰宇新聞台", "寰宇新聞台", "寰宇新聞台", "新聞財經", "litv-longturn14", 1, 6],
+            ["寰宇新聞台灣台", "寰宇新聞台灣台", "寰宇新聞台灣台", "新聞財經", "4gtv-4gtv156", 1, 8],
+            ["寰宇財經台", "寰宇財經台", "寰宇財經台", "新聞財經", "4gtv-4gtv158", 1, 2],
+            ["TVBS歡樂台", "TVBS歡樂台", "TVBS欢乐", "綜藝娛樂", "4gtv-4gtv068", 1, 8],
+            ["TVBS精采台", "TVBS精采台", "TVBS精采", "綜藝娛樂", "4gtv-4gtv067", 1, 9],
+            ["八大精彩台", "八大精彩台", "八大精彩台", "綜藝娛樂", "4gtv-4gtv034", 1, 7],
+            ["八大綜藝台", "八大綜藝台", "八大綜藝台", "綜藝娛樂", "4gtv-4gtv039", 1, 6],
+            ["ELTA娛樂台", "ELTA娛樂台", "ELTA娛樂", "綜藝娛樂", "4gtv-4gtv070", 1, 9],
+            ["ELTV生活英語", "ELTV生活英語", "ELTA生活英語", "科教紀實", "litv-xinchuang20", 10003, 20000],
+            ["東森新聞", "東森新聞", "东森新闻", "新聞財經", "4gtv-4gtv152", 1, 7],
+            ["東森財經新聞", "東森財經新聞", "东森财经", "新聞財經", "4gtv-4gtv153", 1, 6],
+            ["鏡電視新聞台", "鏡電視新聞台", "鏡電視新聞台", "新聞財經", "4gtv-4gtv075", 1, 6],
+            ["亞洲旅遊台", "亞洲旅遊台", "亞洲旅遊台", "科教紀實", "4gtv-4gtv076", 1, 7],
+            ["GINXEsportsTV", "GINXEsportsTV", "GINX-Esports-TV", "體育競技", "4gtv-4gtv053", 1, 9],
+            ["時尚運動X", "時尚運動X", "时尚运动X", "體育競技", "4gtv-4gtv014", 1, 6],
+            ["智林體育台", "智林體育台", "智林体育", "體育競技", "4gtv-4gtv101", 1, 6],
+            ["TraceSports", "TraceSports", "TraceSports", "體育競技", "4gtv-4gtv077", 1, 5],
+            ["影迷數位電影台", "影迷數位電影台", "影迷數位電影台", "電影戲劇", "4gtv-4gtv011", 1, 7],
+            ["AMC電影台", "AMC電影台", "AMC-最愛電影", "電影戲劇", "4gtv-4gtv017", 1, 7],
+            ["公視戲劇台", "公視戲劇台", "公視戲劇台", "電影戲劇", "4gtv-4gtv042", 1, 7],
+            ["采昌影劇台", "采昌影劇台", "采昌影劇台", "電影戲劇", "4gtv-4gtv049", 1, 9],
+            ["台灣戲劇台", "台灣戲劇台", "台灣戲劇台", "電影戲劇", "litv-xinchuang22", 10003, 20000],
+            ["影迷數位紀實台", "影迷數位紀實台", "影迷數位紀實台", "科教紀實", "litv-ftv15", 1, 7],
+            ["達文西頻道", "達文西頻道", "達文西頻道", "科教紀實", "4gtv-4gtv018", 1, 7],
+            ["Classica古典樂", "Classica古典樂", "Classica-古典樂", "科教紀實", "4gtv-4gtv059", 1, 7],
+            ["MezzoLive", "MezzoLive", "Mezzo-Live", "科教紀實", "4gtv-4gtv083", 1, 6],
+            ["豬哥亮歌廳秀", "豬哥亮歌廳秀", "豬哥亮歌廳秀", "綜藝娛樂", "4gtv-4gtv006", 1, 10],
+            ["TraceUrban", "TraceUrban", "Trace-Urban", "體育競技", "4gtv-4gtv082", 1, 7],
+            ["韓國娛樂台", "韓國娛樂台", "韩国娱乐台KMTV", "綜藝娛樂", "4gtv-4gtv016", 1, 7],
+            ["ArirangTV", "ArirangTV", "Arirang-TV", "新聞財經", "4gtv-4gtv079", 1, 8],
+            ["MCE 我的歐洲電影", "MCE", "MCE", "電影戲劇", "litv-ftv10", 1, 7],
+            ["第1商業台", "第1商業台", "第1商业台", "新聞財經", "4gtv-4gtv104", 1, 7],
+            ["Pet Club TV", "Pet-Club-TV", "Pet-Club-TV", "科教紀實", "4gtv-4gtv110", 1, 6],
+            ["Smart知識台", "Smart知識台", "Smart-知識台", "科教紀實", "litv-xinchuang19", 10003, 20000],
+            ["視納華仁紀實頻道", "視納華仁紀實頻道", "視納華仁紀實頻道", "科教紀實", "4gtv-4gtv013", 1, 7],
+            ["客家電視台", "客家電視台", "客家電視台", "綜合頻道", "4gtv-4gtv043", 1, 7],
+            ["好消息", "好消息", "好消息", "綜合頻道", "litv-ftv16", 1, 6],
+            ["好消息2台", "好消息2台", "好消息2台", "綜合頻道", "litv-ftv17", 1, 6],
+            ["國會頻道1", "國會頻道1", "國會頻道1", "科教紀實", "4gtv-4gtv084", 1, 7],
+            ["國會頻道2", "國會頻道2", "國會頻道2", "科教紀實", "4gtv-4gtv085", 1, 6],
+
+            # 如遇到音视频参数变动，需手动修改以下数字部分
+            ["民視", "民視", "民視", "綜合頻道", "4gtv-4gtv155", 1, 7],
+            ["中視經典台", "中視經典台", "中视经典", "綜藝娛樂", "4gtv-4gtv080", 1, 8],
+            ["中視菁采台", "中視菁采台", "中視菁采台", "綜藝娛樂", "4gtv-4gtv064", 1, 9],
+            ["中天亞洲台", "中天亞洲台", "中天亚洲", "綜合頻道", "4gtv-4gtv109", 1, 9],
+            ["TVBS", "TVBS", "TVBS", "綜合頻道", "4gtv-4gtv073", 1, 6],
+            ["TVBS新聞台", "TVBS新聞台", "TVBS新闻", "新聞財經", "4gtv-4gtv072", 1, 6],
+            ["台視", "台視", "台視", "綜合頻道", "4gtv-4gtv066", 1, 6],
+            ["台視新聞台", "台視新聞台", "台視新聞台", "新聞財經", "4gtv-4gtv051", 1, 6],
+            ["台視財經台", "台視財經台", "台視財經台", "新聞財經", "4gtv-4gtv056", 1, 6],
+            ["博斯運動一台", "博斯运动1", "博斯运动1", "體育競技", "litv-xinchuang07", 10003, 20000],
+            ["博斯運動二台", "博斯运动1", "博斯运动1", "體育競技", "litv-xinchuang08", 10003, 20000],
+            ["博斯無限台", "博斯无限", "博斯无限", "體育競技", "litv-xinchuang10", 10003, 20000],
+            ["博斯無限二台", "博斯无限2", "博斯无限2", "體育競技", "litv-xinchuang13", 10003, 20000],
+            ["博斯網球台", "博斯网球", "博斯网球", "體育競技", "litv-xinchuang09", 10003, 20000],
+            ["博斯高球台", "博斯高球1", "博斯高球1", "體育競技", "litv-xinchuang05", 10003, 20000],
+            ["博斯高球二台", "博斯高球2", "博斯高球2", "體育競技", "litv-xinchuang06", 10003, 20000],
+            ["博斯魅力台", "博斯魅力", "博斯魅力", "體育競技", "litv-xinchuang04", 10003, 20000],
+            ["非凡新聞台", "非凡新聞台", "非凡新聞台", "新聞財經", "4gtv-4gtv010", 1, 7],
+            ["非凡商業台", "非凡商業台", "非凡商業台", "新聞財經", "4gtv-4gtv048", 1, 7],
+            ["VOA美國之音", "VOA-美國之音", "VOA-美國之音", "新聞財經", "litv-ftv03", 1, 7],
+        ]
+
+        # 生成M3U播放列表
+        result = ['#EXTM3U x-tvg-url="https://epg.iill.top/epg.xml.gz"']
+        for channel in channels:
+            name, tvg_name, logo_id, group, channel_id, qlt, alt = channel
+            
+            # 使用TVBox内部代理格式
+            # proxy://do=py&type=m3u8&pid=channel_id,qlt,alt
+            url = f"proxy://do=py&type=m3u8&pid={channel_id},{qlt},{alt}"
+            
+            # 如果有扩展参数，添加到URL
+            if self.extend:
+                url += f"&data={self.extend}"
+            
+            # 添加频道信息 - 使用参考代码的格式
+            # tvg-logo使用epg.iill.top的logo地址
+            logo_url = f"https://epg.iill.top/logo/{logo_id}.png"
+            result.append(f'#EXTINF:-1 tvg-id="{tvg_name}" tvg-name="{name}" tvg-logo="{logo_url}" group-title="{group}",{name}')
+            result.append(url)
+        
+        return '\n'.join(result)
+
+    def homeContent(self, filter):
+        return {}
+
+    def homeVideoContent(self):
+        return {}
+
+    def categoryContent(self, cid, page, filter, ext):
+        return {}
+
+    def detailContent(self, did):
+        return {}
+
+    def searchContent(self, key, quick, page='1'):
+        return {}
+
+    def searchContentPage(self, keywords, quick, page):
+        return {}
+
+    def playerContent(self, flag, pid, vipFlags):
+        return {}
+
+    def localProxy(self, params):
+        # TVBox通过proxy://do=py调用此方法
+        # params是字典，包含do, type, pid等参数
+        if params.get('do') == 'py':
+            type_param = params.get('type', '')
+            
+            if type_param == "m3u8":
+                return self.proxyM3u8(params)
+            elif type_param == "ts":
+                return self.get_ts(params)
+        
+        return [302, "text/plain", None, {'Location': 'https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/mp4/xgplayer-demo-720p.mp4'}]
+    
+    def proxyM3u8(self, params):
+        pid = params.get('pid', '')
+        if not pid:
+            return [400, "text/plain", "Missing pid parameter"]
+        
+        info = pid.split(',')
+        if len(info) != 3:
+            return [400, "text/plain", "Invalid pid format"]
+        
+        channel_id = info[0]  # 频道ID
+        qlt = info[1]        # 视频质量参数
+        alt = info[2]        # 音频质量参数
+        
+        # 修正时间偏移量，与原始PHP代码一致
+        timestamp = int(time.time() / 4 - 355017628)
+        t = timestamp * 4
+        m3u8_text = f'#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:4\n#EXT-X-MEDIA-SEQUENCE:{timestamp}\n'
+        
+        for i in range(10):
+            # 生成TS片段URL，与原始PHP代码格式一致
+            ts_url = f'https://ntd-tgc.cdn.hinet.net/live/pool/{channel_id}/litv-pc/{channel_id}-avc1_6000000={qlt}-mp4a_134000_zho={alt}-begin={t}0000000-dur=40000000-seq={timestamp}.ts'
+            
+            # 如果需要代理，使用内部代理格式
+            if self.is_proxy:
+                # base64编码URL
+                encoded_url = self.b64encode(ts_url)
+                # 使用TVBox内部代理格式
+                ts_url = f"proxy://do=py&type=ts&url={encoded_url}"
+                if self.extend:
+                    ts_url += f"&data={self.extend}"
+
+            m3u8_text += f'#EXTINF:4,\n{ts_url}\n'
+            timestamp += 1
+            t += 4
+        
+        return [200, "application/vnd.apple.mpegurl", m3u8_text]
+
+    def get_ts(self, params):
+        url = params.get('url', '')
+        if not url:
+            return [400, "text/plain", "Missing url parameter"]
+        
+        # 解码base64编码的URL
+        ts_url = self.b64decode(url)
+        
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Referer': 'https://www.litv.tv/',
+            'Origin': 'https://www.litv.tv'
+        }
+        
+        # 设置代理（如果需要）
+        proxies = None
+        if self.is_proxy and hasattr(self, 'proxy'):
+            proxies = self.proxy
+        
+        try:
+            response = requests.get(ts_url, headers=headers, stream=True, proxies=proxies, verify=False, timeout=30)
             response.raise_for_status()
             
+            # 流式传输TS片段
             def generate():
                 for chunk in response.iter_content(chunk_size=128000):
                     if chunk:
                         yield chunk
             
-            return generate()
-        else:
-            response = requests.get(url, verify=False, timeout=30, allow_redirects=True)
-            response.raise_for_status()
-            return response.text
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-        return None
+            return [206, "video/MP2T", generate()]
+            
+        except Exception as e:
+            return [500, "text/plain", f"Error fetching TS: {str(e)}"]
 
+    def destroy(self):
+        return '正在Destroy'
 
-def creat_m3u8(id: str, qlt: int, alt: int, proxy: str) -> str:
-    """
-    生成m3u8播放列表
-    """
-    timestamp = int(time.time() / 4 - 355017628)
-    t = timestamp * 4
-    m3u8 = "#EXTM3U\n"
-    m3u8 += "#EXT-X-VERSION:3\n"
-    m3u8 += "#EXT-X-TARGETDURATION:4\n"
-    m3u8 += f"#EXT-X-MEDIA-SEQUENCE:{timestamp}\n"
-    
-    for i in range(10):
-        m3u8 += "#EXTINF:4,\n"
-        ts_url = f"https://ntd-tgc.cdn.hinet.net/live/pool/{id}/litv-pc/{id}-avc1_6000000={qlt}-mp4a_134000_zho={alt}-begin={t}0000000-dur=40000000-seq={timestamp}.ts"
-        
-        if proxy != "true":
-            m3u8 += ts_url + "\n"
-        else:
-            # 修改为代理URL格式
-            base_url = request.host_url.rstrip('/')
-            m3u8 += f"{base_url}proxy?do=py&type=ts&url={urllib.parse.quote(ts_url)}\n"
-        
-        timestamp += 1
-        t += 4
-    
-    return m3u8
+    def b64encode(self, data):
+        return base64.b64encode(data.encode('utf-8')).decode('utf-8')
 
-
-def creat_m3u(channels: dict, proxy: str) -> str:
-    """
-    生成M3U播放列表 - 输出为代理URL格式
-    """
-    m3u = '#EXTM3U x-tvg-url="https://epg.iill.top/epg.xml.gz"\n'
-    base_url = request.host_url.rstrip('/')
-    
-    for channel_id, channel_info in channels.items():
-        qlt = channel_info[0]
-        alt = channel_info[1]
-        channel_name = channel_info[4]
-        group = channel_info[3]
-        logo_id = channel_info[2]
-        
-        # 生成代理URL格式
-        if proxy == "true":
-            # 如果需要代理，使用代理URL
-            proxy_url = f"{base_url}proxy?do=py&type=m3u8&pid={channel_id},{qlt},{alt}"
-        else:
-            # 直接播放
-            proxy_url = f"{base_url}?do=py&type=m3u8&pid={channel_id},{qlt},{alt}"
-        
-        # 输出M3U格式
-        m3u += f'#EXTINF:-1 tvg-id="{channel_id}" tvg-name="{channel_name}" '
-        m3u += f'tvg-logo="https://epg.iill.top/logo/{logo_id}.png" '
-        m3u += f'group-title="{group}",{channel_name}\n'
-        m3u += f'{proxy_url}\n'
-    
-    return m3u
-
-
-@app.route('/', methods=['GET'])
-def index():
-    """
-    主路由 - 生成M3U播放列表
-    """
-    proxy = request.args.get('proxy', '').strip()
-    
-    return Response(
-        creat_m3u(n, proxy),
-        mimetype='audio/x-mpegurl',
-        headers={'Content-Disposition': 'inline; filename=playlist.m3u'}
-    )
-
-
-@app.route('/proxy', methods=['GET'])
-def proxy_handler():
-    """
-    代理路由 - 处理代理请求
-    """
-    do_type = request.args.get('do', '').strip()
-    content_type = request.args.get('type', '').strip()
-    pid = request.args.get('pid', '').strip()
-    url = request.args.get('url', '').strip()
-    
-    if do_type != 'py':
-        return Response('Invalid request', status=400, mimetype='text/plain')
-    
-    if content_type == 'm3u8':
-        # 处理m3u8请求
-        if not pid:
-            return Response('Missing pid parameter', status=400, mimetype='text/plain')
-        
-        # 解析pid参数：channel_id,qlt,alt
-        pid_parts = pid.split(',')
-        if len(pid_parts) != 3:
-            return Response('Invalid pid format', status=400, mimetype='text/plain')
-        
-        channel_id = pid_parts[0]
-        qlt = int(pid_parts[1])
-        alt = int(pid_parts[2])
-        
-        # 检查频道是否存在
-        if channel_id not in n:
-            return Response('Channel not found', status=404, mimetype='text/plain')
-        
-        # 生成m3u8
-        m3u8_content = creat_m3u8(channel_id, qlt, alt, "false")
-        
-        return Response(
-            m3u8_content.strip(),
-            mimetype='application/vnd.apple.mpegurl',
-            headers={'Content-Disposition': 'inline; filename=index.m3u8'}
-        )
-    
-    elif content_type == 'ts':
-        # 处理ts片段请求
-        if not url:
-            return Response('Missing url parameter', status=400, mimetype='text/plain')
-        
-        # 解码URL
-        ts_url = urllib.parse.unquote(url)
-        
-        # 流式传输TS片段
-        def generate():
-            stream_gen = get_curl(ts_url, download=True)
-            if stream_gen:
-                for chunk in stream_gen:
-                    yield chunk
-        
-        return Response(
-            stream_with_context(generate()),
-            mimetype='video/MP2T',
-            headers={
-                'Content-Disposition': 'inline; filename=stream.ts',
-                'X-Accel-Buffering': 'no',
-                'Cache-Control': 'no-cache'
-            }
-        )
-    
-    else:
-        return Response('Invalid type parameter', status=400, mimetype='text/plain')
-
-
-@app.route('/m3u8', methods=['GET'])
-def m3u8_handler():
-    """
-    直接m3u8路由 - 兼容旧格式
-    """
-    channel_id = request.args.get('id', '').strip()
-    proxy = request.args.get('proxy', '').strip()
-    
-    if not channel_id:
-        return Response('Missing id parameter', status=400, mimetype='text/plain')
-    
-    if channel_id not in n:
-        return Response('Channel not found', status=404, mimetype='text/plain')
-    
-    qlt = n[channel_id][0]
-    alt = n[channel_id][1]
-    
-    # 生成m3u8
-    m3u8_content = creat_m3u8(channel_id, qlt, alt, proxy)
-    
-    return Response(
-        m3u8_content.strip(),
-        mimetype='application/vnd.apple.mpegurl',
-        headers={'Content-Disposition': 'inline; filename=index.m3u8'}
-    )
+    def b64decode(self, data):
+        return base64.b64decode(data.encode('utf-8')).decode('utf-8')
 
 
 if __name__ == '__main__':
-    # 可以自定义端口
-    port = 9978
-    print(f"服务启动在: http://127.0.0.1:{port}")
-    print(f"主播放列表: http://127.0.0.1:{port}/")
-    print(f"频道示例: http://127.0.0.1:{port}/proxy?do=py&type=m3u8&pid=litv-ftv10,1,7")
-    print(f"TS片段代理: http://127.0.0.1:{port}/proxy?do=py&type=ts&url=encoded_url")
+    # 测试代码
+    spider = Spider()
+    spider.init('{"proxy": null}')
     
-    app.run(debug=True, host='0.0.0.0', port=port)
+    # 生成直播列表
+    live_content = spider.liveContent("")
+    print("生成的M3U内容（前300字符）：")
+    print(live_content[:300] + "..." if len(live_content) > 300 else live_content)
+    
+    # 测试M3U8生成
+    print("\n测试M3U8生成：")
+    test_params = {'do': 'py', 'type': 'm3u8', 'pid': 'litv-ftv10,1,7'}
+    m3u8_result = spider.proxyM3u8(test_params)
+    if isinstance(m3u8_result, list) and len(m3u8_result) > 2:
+        print("生成的M3U8内容（前300字符）：")
+        print(m3u8_result[2][:300] + "..." if len(m3u8_result[2]) > 300 else m3u8_result[2])
+    else:
+        print("M3U8生成失败:", m3u8_result)
 ```
 
