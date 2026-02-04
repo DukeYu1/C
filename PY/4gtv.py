@@ -309,8 +309,10 @@ def index():
                 final_url = url_item
         
         # 处理URL
-        if final_url.startswith('https://4gtvfree-mozai.4gtv.tv') or final_url.startswith('https://4gtvfreemobile-mozai.4gtv.tv'):
-            # final_url = final_url.replace('/index.m3u8?', '/1080.m3u8?')
+        if final_url.startswith('https://4gtvfree-mozai.4gtv.tv'):
+            final_url = final_url.replace('/index.m3u8?', '/1080.m3u8?')
+            return redirect(final_url)
+        elif final_url.startswith('https://4gtvfreemobile-mozai.4gtv.tv'):
             return redirect(final_url)
         else:
             final_url = get_play_url(final_url, 'url')
